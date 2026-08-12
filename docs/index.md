@@ -1,47 +1,72 @@
 ---
 layout: home
+pageClass: pixel-muse-home
 
 hero:
   name: Pixel Muse Studio
-  text: 프로젝트 공식 문서
-  tagline: 설정부터 연동 API까지, 실제로 복사해 사용할 수 있는 예제 중심 가이드입니다.
+  text: 상상을 플레이 가능한 세계로
+  tagline: Minecraft 프로젝트의 설정부터 연동 API까지. 실제 서버에서 바로 사용할 수 있는 예제 중심 공식 문서입니다.
+  image:
+    src: /brand/pixel-muse-icon-1000.png
+    alt: Pixel Muse Studio pixel logo
   actions:
     - theme: brand
-      text: PMdurability 시작하기
-      link: /pmdurability/getting-started
+      text: 문서 시작하기
+      link: /guide/
     - theme: alt
-      text: 프로젝트 둘러보기
-      link: /projects/
+      text: PMdurability 보기
+      link: /pmdurability/
 
 features:
-  - icon: 🧩
-    title: 프로젝트별 문서
-    details: 각 플러그인의 설치, 설정, 예제와 API를 독립된 카테고리로 제공합니다.
-  - icon: 📋
-    title: 복사 가능한 예제
-    details: 모든 주요 기능에 바로 적용할 수 있는 YAML, 명령어 또는 코드 예제가 포함됩니다.
-  - icon: 🔎
-    title: 빠른 검색
-    details: 우측 상단 검색으로 설정 키와 기능 이름을 문서 전체에서 찾을 수 있습니다.
-  - icon: 🌙
-    title: 읽기 편한 화면
-    details: 모바일 탐색, 다크 모드, 페이지 목차와 이전·다음 문서를 지원합니다.
+  - icon: ✦
+    title: 프로젝트별 가이드
+    details: 플러그인마다 설치, 설정, 예제와 API를 독립된 문서 묶음으로 제공합니다.
+  - icon: ⧉
+    title: 바로 쓰는 예제
+    details: 복사해서 이름과 수치만 바꾸면 되는 YAML, 명령어, Skript와 Java 예제입니다.
+  - icon: ⌕
+    title: 빠른 문서 검색
+    details: 설정 키나 기능 이름을 입력하면 전체 프로젝트 문서에서 즉시 찾을 수 있습니다.
 ---
 
-## 빠른 예제
-
-CraftEngine 아이템에 커스텀 내구도를 연결하는 최소 설정입니다.
+<section class="brand-intro">
+  <div class="brand-intro__copy">
+    <p class="eyebrow">FEATURED PROJECT</p>
+    <h2>PMdurability</h2>
+    <p>CraftEngine 아이템에 자유로운 최대 내구도와 픽셀 게이지를 더합니다. 음식, 제작 도구, 수리, 인챈트와 외부 플러그인 연동까지 하나의 흐름으로 관리합니다.</p>
+    <div class="brand-tags">
+      <span>CraftEngine</span><span>Paper</span><span>PlaceholderAPI</span><span>Skript</span>
+    </div>
+    <a class="brand-link" href="./pmdurability/">PMdurability 문서 열기 <span>→</span></a>
+  </div>
+  <div class="brand-intro__code">
+    <div class="code-head"><i></i><i></i><i></i><span>item.yml</span></div>
 
 ```yaml
-items:
-  pm_durability:bright_blue_wooden_sword:
-    material: wooden_sword
-    item_model: pm_durability:bright_blue_wooden_sword
-    data:
-      item_name: "<!i><#55FFFF>밝은 블루 나무 검"
-      max_damage: 100
-      pdc:
-        "pmdurability:tint": "#55FFFF"
+data:
+  lore:
+    - "<PMdurability>"
+  max_damage: 100
+  pdc:
+    "pmdurability:tint": "#9B5CFF"
 ```
 
-[설정 전체 설명 보기 →](/pmdurability/configuration)
+  </div>
+</section>
+
+<section class="brand-principles">
+  <div>
+    <p class="eyebrow">DOCUMENTATION PRINCIPLES</p>
+    <h2>읽고 끝나는 문서가 아니라<br>바로 적용되는 문서</h2>
+  </div>
+  <ol>
+    <li><strong>01</strong><span><b>설정부터</b> 필요한 키와 기본값을 먼저 확인합니다.</span></li>
+    <li><strong>02</strong><span><b>예제로</b> 완성된 구성을 복사해 빠르게 테스트합니다.</span></li>
+    <li><strong>03</strong><span><b>연동까지</b> 명령어, 이벤트와 외부 플러그인을 연결합니다.</span></li>
+  </ol>
+</section>
+
+<section class="mascot-strip">
+  <img src="/brand/pmstudio-mascots.png" alt="Pixel Muse Studio pixel mascots">
+  <div><strong>Pixel Muse Studio</strong><span>작은 아이디어를 오래 쓰이는 시스템으로 만듭니다.</span></div>
+</section>

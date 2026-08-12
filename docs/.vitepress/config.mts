@@ -9,10 +9,13 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ['meta', { name: 'theme-color', content: '#7c5cff' }],
-    ['link', { rel: 'icon', href: '/pixel-muse-docs/favicon.svg' }]
+    ['link', { rel: 'icon', type: 'image/png', href: '/pixel-muse-docs/brand/pixel-muse-icon.png' }],
+    ['meta', { property: 'og:title', content: 'Pixel Muse Studio Docs' }],
+    ['meta', { property: 'og:description', content: 'Minecraft 프로젝트를 위한 예제 중심 공식 문서' }],
+    ['meta', { property: 'og:image', content: 'https://pixel-muse-studio.github.io/pixel-muse-docs/brand/pixel-muse-background.png' }]
   ],
   themeConfig: {
-    logo: '/favicon.svg',
+    logo: '/brand/pixel-muse-icon.png',
     siteTitle: 'Pixel Muse Docs',
     search: {
       provider: 'local',
