@@ -40,9 +40,8 @@ features:
     <a class="brand-link" href="./pmdurability/">PMdurability 문서 열기 <span>→</span></a>
   </div>
   <div class="brand-intro__code">
-    <div class="code-head"><i></i><i></i><i></i><span>item.yml</span></div>
 
-```yaml
+```yaml [item.yml]
 data:
   lore:
     - "<PMdurability>"

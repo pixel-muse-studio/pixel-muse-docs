@@ -2,7 +2,7 @@
 
 ## Colored durability item
 
-```yaml
+```yaml [bright-blue-sword.yml]
 items:
   pm_durability:bright_blue_wooden_sword:
     material: wooden_sword
@@ -20,7 +20,7 @@ items:
 
 ## Food with three uses
 
-```yaml
+```yaml [red-beef.yml]
 items:
   pm_durability:red_beef:
     material: beef
@@ -37,7 +37,7 @@ The item remains after eating until its custom durability reaches zero.
 
 ## Crafting tool
 
-```yaml
+```yaml [cooking-knife.yml]
 items:
   pm_durability:cooking_knife:
     material: iron_sword

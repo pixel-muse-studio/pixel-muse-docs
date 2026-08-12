@@ -4,7 +4,7 @@
 
 `plugins/PMdurability/config.yml`
 
-```yaml
+```yaml [config.yml]
 lore: "<!i><gray>내구도: {current} / {max}"
 gauge-default: damaged
 repair-material-default-percent: 25

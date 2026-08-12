@@ -38,7 +38,7 @@ Placeholders read the main-hand item and return an empty string when it is not m
 
 New event syntax is registered after a full server restart.
 
-```vb
+```vb [durability.sk]
 on pm durability change:
     send "Changed item: %event-string%" to event-player
 
@@ -57,7 +57,7 @@ on pm durability tool use:
 | `PMDurabilityBreakEvent` | Immediately before the item breaks |
 | `PMDurabilityToolUseEvent` | Once for every crafting-tool use |
 
-```java
+```java [DurabilityListener.java]
 @EventHandler
 public void onBreak(PMDurabilityBreakEvent event) {
     event.setCancelled(true); // Keep one durability

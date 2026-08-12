@@ -2,7 +2,7 @@
 
 ## 단계별 색상 검
 
-```yaml
+```yaml [bright-blue-sword.yml]
 items:
   pm_durability:status_sword:
     material: iron_sword
@@ -22,7 +22,7 @@ items:
 
 ## 내구도 음식
 
-```yaml
+```yaml [red-beef.yml]
 items:
   pm_durability:red_beef:
     material: beef
@@ -43,7 +43,7 @@ items:
 
 ## 제작 도구와 레시피
 
-```yaml
+```yaml [cooking-knife.yml]
 items:
   pm_durability:cooking_knife:
     material: iron_sword

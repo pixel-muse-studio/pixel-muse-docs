@@ -42,6 +42,23 @@ export default defineConfig({
   base: '/pixel-muse-docs/',
   cleanUrls: true,
   lastUpdated: true,
+  markdown: {
+    config(md) {
+      const renderFence = md.renderer.rules.fence
+      if (!renderFence) return
+      md.renderer.rules.fence = (tokens, index, options, env, self) => {
+        const token = tokens[index]
+        const info = token.info.trim()
+        const titleMatch = info.match(/\[([^\]]+)\]\s*$/)
+        const language = (info.match(/^([^\s[]+)/)?.[1] || 'text').toLowerCase()
+        const title = titleMatch?.[1] || (language === 'text' ? 'example' : `${language} example`)
+        if (titleMatch) token.info = info.replace(/\s*\[[^\]]+\]\s*$/, '')
+        const safeTitle = md.utils.escapeHtml(title)
+        const safeLanguage = md.utils.escapeHtml(language === 'vb' ? 'skript' : language)
+        return `<div class="pm-code-example"><div class="pm-code-toolbar"><span class="pm-code-dots" aria-hidden="true"></span><span class="pm-code-file">${safeTitle}</span><span class="pm-code-language">${safeLanguage}</span></div>${renderFence(tokens, index, options, env, self)}</div>`
+      }
+    }
+  },
   locales: {
     root: { label: 'English', lang: 'en-US', link: '/' },
     ko: { label: '한국어', lang: 'ko-KR', link: '/ko/' }

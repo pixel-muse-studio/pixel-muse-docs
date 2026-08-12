@@ -48,7 +48,7 @@ lore:
 
 새 이벤트 문법은 서버 전체 재시작 후 등록됩니다.
 
-```vb
+```vb [durability.sk]
 on pm durability change:
     send "내구도 변경 아이템: %event-string%" to event-player
 
@@ -67,7 +67,7 @@ on pm durability tool use:
 | `PMDurabilityBreakEvent` | 파손 직전 |
 | `PMDurabilityToolUseEvent` | 제작 도구 1회 사용마다 |
 
-```java
+```java [DurabilityListener.java]
 @EventHandler
 public void onChange(PMDurabilityChangeEvent event) {
     if (!event.getItemId().equals("pm_durability:status_sword")) return;

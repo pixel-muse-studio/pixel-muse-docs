@@ -26,7 +26,7 @@ plugins/
 
 Use CraftEngine's `max_damage` as the maximum durability. PMdurability detects compatible CraftEngine items automatically.
 
-```yaml
+```yaml [item.yml]
 items:
   pm_durability:bright_blue_wooden_sword:
     material: wooden_sword

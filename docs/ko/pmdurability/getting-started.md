@@ -19,7 +19,7 @@ plugins/
 
 ## 첫 아이템
 
-```yaml
+```yaml [item.yml]
 items:
   pm_durability:starter_sword:
     material: wooden_sword
