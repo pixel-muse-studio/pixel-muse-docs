@@ -159,8 +159,8 @@ body { width: 100%; letter-spacing: -.012em; }
   box-shadow: 0 16px 38px rgba(38, 15, 61, .09);
 }
 .vp-doc .pm-code-toolbar {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   min-height: 42px;
   padding: 0 14px;
@@ -173,10 +173,7 @@ body { width: 100%; letter-spacing: -.012em; }
 .pm-code-dots::before, .pm-code-dots::after { content: ""; display: block; width: 8px; height: 8px; border-radius: 50%; box-shadow: 14px 0 0 #9c53f0; }
 .pm-code-dots::before { margin-right: 14px; background: #d34cff; box-shadow: 14px 0 0 #8a43ed; }
 .pm-code-dots::after { background: #6f4a82; box-shadow: none; }
-.pm-code-file { grid-column: 2; color: #b29bc7; }
-.pm-code-language { grid-column: 3; justify-self: end; color: #8f76aa; text-transform: lowercase; }
-.pm-code-toolbar.no-file { grid-template-columns: 1fr 1fr; }
-.pm-code-toolbar.no-file .pm-code-language { grid-column: 2; }
+.pm-code-label { margin-left: auto; color: #9f85b8; text-transform: none; }
 .vp-doc .pm-code-example div[class*='language-'] { margin: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .vp-doc .pm-code-example div[class*='language-']::before { display: none; }
 .vp-doc .pm-code-example pre { padding-top: 20px; padding-bottom: 22px; background: #120b20; }
