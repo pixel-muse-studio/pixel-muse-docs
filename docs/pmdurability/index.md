@@ -1,32 +1,32 @@
-# 💎 PMdurability
+# PMdurability
 
-> CraftEngine 중심의 커스텀 내구도 브리지
+> A CraftEngine-first custom durability bridge.
 
 ![Version](https://img.shields.io/badge/version-2.4.0-7C3AED)
 ![Paper](https://img.shields.io/badge/Paper-1.21.4%2B-06B6D4)
 ![Verified](https://img.shields.io/badge/verified-26.1.2-22C55E)
 
-## 무엇을 제공하나요?
+## Features
 
-- CraftEngine `max_damage` 기반 자유로운 최대 내구도
-- 인벤토리·GUI 전용 14단계 커스텀 게이지
-- 기본 색상과 내구도 구간별 Tint
-- 음식, 제작 도구, Shift 제작, 제작대·모루 수리
-- Mending, Unbreaking, Unbreakable, 파손 보호
-- PlaceholderAPI, Skript, Java 이벤트 API
-- 플레이어·상자·엔더 상자·드롭 아이템 분할 동기화
+- Any maximum durability value through CraftEngine `max_damage`
+- A 14-step custom gauge visible in inventories and GUIs
+- Base and durability-range tint colors
+- Food, crafting tools, shift crafting, crafting-table and anvil repairs
+- Mending, Unbreaking, Unbreakable, and break protection
+- PlaceholderAPI, Skript, and Java events
+- Distributed synchronization for players, containers, ender chests, and dropped items
 
-## 호환성
+## Compatibility
 
-| 구분 | 지원 |
+| Type | Support |
 |---|---|
-| 서버 | Paper 계열 1.21.4 이상 |
-| 검증 환경 | Paper 26.1.2 |
-| 필수 | CraftEngine |
-| 선택 | PlaceholderAPI, Skript, Nexo |
-| F3+H | 별도 정보 추가 안 함 |
+| Server | Paper-based servers 1.21.4+ |
+| Verified | Paper 26.1.2 |
+| Required | CraftEngine |
+| Optional | PlaceholderAPI, Skript, Nexo |
+| F3+H | No extra information is injected |
 
-## 가장 작은 예제
+## Minimal example
 
 ```yaml
 data:
@@ -37,9 +37,9 @@ data:
     "pmdurability:tint": "#55FFFF"
 ```
 
-## 다음 단계
+## Next steps
 
-1. [설치와 빠른 시작](getting-started)
-2. [설정 및 PDC 키](configuration)
-3. [완성 예제](examples)
-4. [명령어·Placeholder·API](commands-api)
+1. [Install and start](getting-started)
+2. [Configuration and PDC keys](configuration)
+3. [Complete examples](examples)
+4. [Commands, placeholders, and API](commands-api)

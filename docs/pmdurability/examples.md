@@ -1,87 +1,63 @@
-# 🧪 PMdurability 완성 예제
+# Complete examples
 
-## 단계별 색상 검
+## Colored durability item
 
 ```yaml
 items:
-  pm_durability:status_sword:
-    material: iron_sword
-    item_model: new_durability:iron_sword_tinted
+  pm_durability:bright_blue_wooden_sword:
+    material: wooden_sword
+    item_model: pm_durability:bright_blue_wooden_sword
     data:
-      item_name: "<!i><#55FFFF>상태 표시 검"
+      item_name: "<!i><#55FFFF>Bright Blue Wooden Sword"
       lore:
-        - "<gray>내구도에 따라 색상이 바뀝니다"
+        - "<gray>A lightweight test weapon"
         - "<PMdurability>"
       max_damage: 100
       pdc:
         "pmdurability:tint": "#55FFFF"
-        "pmdurability:tint_30/15": "#FFB020"
-        "pmdurability:tint_15/0": "#FF3636"
         "pmdurability:gauge": "damaged"
 ```
 
-## 내구도 음식
+## Food with three uses
 
 ```yaml
 items:
   pm_durability:red_beef:
     material: beef
-    hand_animation_on_swap: false
-    item_model: new_durability:beef_tinted
     data:
-      item_name: "<!i><#FF3636>붉은 내구도 소고기"
+      item_name: "<!i><#FF3636>Three-bite Beef"
       lore:
         - "<PMdurability>"
-      components:
-        minecraft:max_stack_size: 1
       max_damage: 3
       pdc:
         "pmdurability:tint": "#FF3636"
 ```
 
-한 번 먹을 때 내구도가 1 감소하고, 마지막 내구도를 사용하면 아이템이 사라집니다.
+The item remains after eating until its custom durability reaches zero.
 
-## 제작 도구와 레시피
+## Crafting tool
 
 ```yaml
 items:
   pm_durability:cooking_knife:
     material: iron_sword
-    item_model: new_durability:iron_sword_tinted
     data:
-      item_name: "<!i><#B0B0B0>요리용 철칼"
+      item_name: "<!i><gray>Cooking Knife"
       lore:
         - "<PMdurability>"
       max_damage: 64
       pdc:
-        "pmdurability:tint": "#808080"
+        "pmdurability:tint": "#A9A9A9"
         "pmdurability:craft_damage": 1
-        "pmdurability:repair_material": "minecraft:iron_ingot"
-        "pmdurability:repair_amount": 16
-    settings:
-      craft_remainder:
-        type: hurt_and_break
-        damage: 0
-
-recipes:
-  pm_durability:cooked_beef_with_knife:
-    type: shapeless
-    ingredients:
-      - pm_durability:cooking_knife
-      - minecraft:beef
-    result:
-      id: minecraft:cooked_beef
-      count: 1
 ```
 
-Shift 제작은 재료·인벤토리 공간·도구 내구도 범위 안에서 최대 횟수를 제작합니다.
+Shift crafting consumes durability once per actual craft and emits one tool-use event per craft.
 
-## 파손 방지 도구
+## Break protection
 
 ```yaml
 pdc:
-  "pmdurability:tint": "#A855F7"
   "pmdurability:break_protection": 1
 ```
 
-내구도가 0이 될 상황에서 아이템이 사라지지 않고 1로 남습니다.
+The item stops at one durability instead of breaking.

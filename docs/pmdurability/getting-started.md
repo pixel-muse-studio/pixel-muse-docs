@@ -1,58 +1,51 @@
-# 🚀 PMdurability 시작하기
+# Install and start
 
-## 설치
+## Requirements
 
-1. `PMdurability.jar`를 서버의 `plugins` 폴더에 넣습니다.
-2. CraftEngine과 내구도 리소스를 설치합니다.
-3. 서버를 완전히 재시작합니다.
-4. CraftEngine 리소스 팩을 빌드·배포합니다.
-5. 설정 변경 후 `/pmdurability reload`를 실행합니다.
+- A Paper-based server supported by the plugin
+- CraftEngine
+- The matching PMdurability build
+- The PMdurability resource pack inside CraftEngine resources
+
+Optional integrations: PlaceholderAPI, Skript, and Nexo.
+
+## Installation
+
+1. Put `PMdurability.jar` in `plugins/`.
+2. Keep the durability resources inside CraftEngine's resource directory.
+3. Start the server once.
+4. Check that PMdurability and CraftEngine are enabled.
 
 ```text
 plugins/
-├─ PMdurability.jar
-├─ PMdurability/config.yml
-└─ CraftEngine/resources/
-   ├─ new_durability/
-   └─ pm_durability/
+├─ CraftEngine/
+└─ PMdurability.jar
 ```
 
-## 첫 아이템
+## First item
+
+Use CraftEngine's `max_damage` as the maximum durability. PMdurability detects compatible CraftEngine items automatically.
 
 ```yaml
 items:
-  pm_durability:starter_sword:
+  pm_durability:bright_blue_wooden_sword:
     material: wooden_sword
-    hand_animation_on_swap: false
-    item_model: new_durability:wooden_sword_tinted
+    item_model: pm_durability:bright_blue_wooden_sword
     data:
-      item_name: "<!i><#55FFFF>시작용 검"
+      item_name: "<!i><#55FFFF>Bright Blue Wooden Sword"
       lore:
-        - "<gray>내 첫 커스텀 내구도 아이템"
         - "<PMdurability>"
       max_damage: 100
       pdc:
         "pmdurability:tint": "#55FFFF"
-        "pmdurability:gauge": "damaged"
 ```
 
-## 확인
+`<PMdurability>` is replaced with the durability lore at that exact position.
 
-아이템을 주 손에 들고 실행합니다.
+## Reload
 
 ```text
-/pmdurability inspect
+/pmdurability reload
 ```
 
-정상 예시:
-
-```text
-아이템 ID: pm_durability:starter_sword
-현재 내구도: 100
-최대 내구도: 100
-사용률: 100.00%
-Tint: #55FFFF
-UUID: ...
-```
-
-> `<PMdurability>`는 실제 로어로 교체됩니다. 새 아이템에는 `pmdurability:enabled`와 `pmdurability:item_id`가 필요하지 않습니다.
+The reload refreshes configuration and synchronizes managed items.

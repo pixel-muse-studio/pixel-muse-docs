@@ -1,18 +1,18 @@
-# 문서 이용 안내
+# Using the docs
 
-Pixel Muse Studio에서 제작하는 Minecraft 플러그인의 공식 문서입니다.
+This is the official documentation for Minecraft plugins built by Pixel Muse Studio.
 
-## 문서 읽는 순서
+## Recommended path
 
-1. **설치 및 시작**에서 지원 환경과 설치 위치를 확인합니다.
-2. **설정**에서 사용할 기능과 키를 선택합니다.
-3. **완성 예제**를 복사한 뒤 아이템 ID와 수치만 변경합니다.
-4. 외부 플러그인 연동은 **명령어 · API**에서 확인합니다.
+1. Read **Install & start** for requirements and file locations.
+2. Choose the keys you need in **Configuration**.
+3. Copy a working setup from **Complete examples**.
+4. Use **Commands & API** for integrations.
 
-::: tip 예제 원칙
-모든 기능 문서에는 실제로 복사할 수 있는 설정 또는 코드 예제를 함께 제공합니다.
+::: tip Example-first
+Every major feature includes a configuration or code example you can copy and adapt.
 :::
 
-## 현재 공개 프로젝트
+## Published projects
 
-- [PMdurability](/pmdurability/) — CraftEngine 연동 커스텀 내구도 시스템
+- [PMdurability](/pmdurability/) — custom durability for CraftEngine items

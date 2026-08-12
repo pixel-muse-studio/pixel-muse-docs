@@ -1,32 +1,29 @@
-# ⌨️ PMdurability 명령어와 API
+# Commands and API
 
-## 관리자 명령어
+## Administrator commands
 
-모든 아이템 명령은 주 손의 PMdurability 아이템을 대상으로 합니다.
+Item commands target the PMdurability item in the main hand.
 
-| 명령어 | 설명 | 권한 |
+| Command | Purpose | Permission |
 |---|---|---|
-| `/pmdurability inspect` | ID·내구도·Tint·UUID 확인 | `pmdurability.inspect` |
-| `/pmdurability damage <값>` | 내구도 감소 | `pmdurability.admin` |
-| `/pmdurability repair <값>` | 지정 값만큼 회복 | `pmdurability.admin` |
-| `/pmdurability repair full` | 완전 수리 | `pmdurability.admin` |
-| `/pmdurability set <값>` | 현재 내구도 설정 | `pmdurability.admin` |
-| `/pmdurability reload` | 설정과 아이템 동기화 | `pmdurability.reload` |
+| `/pmdurability inspect` | Show ID, durability, tint, and UUID | `pmdurability.inspect` |
+| `/pmdurability damage <value>` | Decrease durability | `pmdurability.admin` |
+| `/pmdurability repair <value>` | Restore durability | `pmdurability.admin` |
+| `/pmdurability repair full` | Fully repair | `pmdurability.admin` |
+| `/pmdurability set <value>` | Set current durability | `pmdurability.admin` |
+| `/pmdurability reload` | Reload and synchronize | `pmdurability.reload` |
 
-별칭: `/pmdura`
-
-## 명령어 예제
+Alias: `/pmdura`
 
 ```text
 /pmdurability damage 10
-/pmdurability repair 25
 /pmdurability repair full
 /pmdurability set 1
 ```
 
 ## PlaceholderAPI
 
-주 손 아이템 기준이며 대상이 없으면 빈 문자열입니다.
+Placeholders read the main-hand item and return an empty string when it is not managed.
 
 ```text
 %pmdurability_id%
@@ -37,59 +34,32 @@
 %pmdurability_uuid%
 ```
 
-표시 예제:
-
-```yaml
-lore:
-  - "<gray>남은 내구도: %pmdurability_current% / %pmdurability_max%"
-```
-
 ## Skript
 
-새 이벤트 문법은 서버 전체 재시작 후 등록됩니다.
+New event syntax is registered after a full server restart.
 
 ```vb
 on pm durability change:
-    send "내구도 변경 아이템: %event-string%" to event-player
+    send "Changed item: %event-string%" to event-player
 
 on pm durability break:
     cancel event
 
 on pm durability tool use:
-    # Shift 제작도 실제 제작 횟수만큼 발생
+    # Fired once for every actual shift craft
 ```
 
-## Java 이벤트 API
+## Java events
 
-| 이벤트 | 발생 시점 |
+| Event | Timing |
 |---|---|
-| `PMDurabilityChangeEvent` | 실제 내구도 변경 전 |
-| `PMDurabilityBreakEvent` | 파손 직전 |
-| `PMDurabilityToolUseEvent` | 제작 도구 1회 사용마다 |
-
-```java
-@EventHandler
-public void onChange(PMDurabilityChangeEvent event) {
-    if (!event.getItemId().equals("pm_durability:status_sword")) return;
-    if (event.getNewDurability() <= 5) {
-        event.setNewDurability(5);
-    }
-}
-```
+| `PMDurabilityChangeEvent` | Before a durability change is applied |
+| `PMDurabilityBreakEvent` | Immediately before the item breaks |
+| `PMDurabilityToolUseEvent` | Once for every crafting-tool use |
 
 ```java
 @EventHandler
 public void onBreak(PMDurabilityBreakEvent event) {
-    // 취소하면 내구도 1로 보호됩니다.
-    event.setCancelled(true);
-}
-```
-
-```java
-@EventHandler
-public void onToolUse(PMDurabilityToolUseEvent event) {
-    int index = event.getCraftIndex();
-    int total = event.getCraftTotal();
-    // 예: '10번 칼질하기' 퀘스트 카운트 +1
+    event.setCancelled(true); // Keep one durability
 }
 ```
