@@ -51,11 +51,10 @@ export default defineConfig({
         const info = token.info.trim()
         const titleMatch = info.match(/\[([^\]]+)\]\s*$/)
         const language = (info.match(/^([^\s[]+)/)?.[1] || 'text').toLowerCase()
-        const title = titleMatch?.[1] || (language === 'text' ? 'example' : `${language} example`)
         if (titleMatch) token.info = info.replace(/\s*\[[^\]]+\]\s*$/, '')
-        const safeTitle = md.utils.escapeHtml(title)
+        const titleHtml = titleMatch ? `<span class="pm-code-file">${md.utils.escapeHtml(titleMatch[1])}</span>` : ''
         const safeLanguage = md.utils.escapeHtml(language === 'vb' ? 'skript' : language)
-        return `<div class="pm-code-example"><div class="pm-code-toolbar"><span class="pm-code-dots" aria-hidden="true"></span><span class="pm-code-file">${safeTitle}</span><span class="pm-code-language">${safeLanguage}</span></div>${renderFence(tokens, index, options, env, self)}</div>`
+        return `<div class="pm-code-example"><div class="pm-code-toolbar${titleMatch ? '' : ' no-file'}"><span class="pm-code-dots" aria-hidden="true"></span>${titleHtml}<span class="pm-code-language">${safeLanguage}</span></div>${renderFence(tokens, index, options, env, self)}</div>`
       }
     }
   },
