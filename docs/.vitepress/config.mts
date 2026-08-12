@@ -75,28 +75,30 @@ export default defineConfig({
     siteTitle: 'Pixel Muse Docs',
     search: { provider: 'local' },
     socialLinks: [],
+    nav: [
+      { text: 'Guide', link: '/guide/' },
+      { text: 'Projects', items: [
+        { text: 'Browse all projects', link: '/projects/' },
+        { text: 'PMdurability', link: '/pmdurability/' }
+      ] }
+    ],
+    sidebar: enSidebar,
+    outline: { level: [2, 3], label: 'On this page' },
+    docFooter: { prev: 'Previous', next: 'Next' },
+    lastUpdated: { text: 'Last updated' },
+    returnToTopLabel: 'Back to top',
+    sidebarMenuLabel: 'Menu',
+    darkModeSwitchLabel: 'Theme',
     locales: {
-      root: {
-        label: 'English',
-        selectText: 'Languages',
-        nav: [
-          { text: 'Guide', link: '/guide/' },
-          { text: 'Projects', items: [{ text: 'All projects', link: '/projects/' }, { text: 'PMdurability', link: '/pmdurability/' }] }
-        ],
-        sidebar: enSidebar,
-        outline: { level: [2, 3], label: 'On this page' },
-        docFooter: { prev: 'Previous', next: 'Next' },
-        lastUpdated: { text: 'Last updated' },
-        returnToTopLabel: 'Back to top',
-        sidebarMenuLabel: 'Menu',
-        darkModeSwitchLabel: 'Theme'
-      },
       ko: {
         label: '한국어',
         selectText: '언어',
         nav: [
           { text: '가이드', link: '/ko/guide/' },
-          { text: '프로젝트', items: [{ text: '전체 프로젝트', link: '/ko/projects/' }, { text: 'PMdurability', link: '/ko/pmdurability/' }] }
+          { text: '프로젝트', items: [
+            { text: '전체 프로젝트 보기', link: '/ko/projects/' },
+            { text: 'PMdurability', link: '/ko/pmdurability/' }
+          ] }
         ],
         sidebar: koSidebar,
         outline: { level: [2, 3], label: '이 페이지에서' },
