@@ -52,6 +52,7 @@ body { color: var(--pm-text); background: var(--pm-canvas); }
   background: transparent !important;
 }
 .VPNavBar { padding-top: 16px; background: transparent !important; }
+.VPNavBar.has-sidebar > .wrapper { padding-inline: 32px !important; }
 .VPNavBar > .wrapper > .container {
   width: calc(100% - 40px);
   max-width: 1540px;
@@ -446,6 +447,7 @@ body:has(.VPLocalSearchBox) { overflow: hidden; }
 }
 
 @media (max-width: 959px) {
+  .VPNavBar.has-sidebar > .wrapper { padding-inline: 12px !important; }
   .VPNavBar > .wrapper > .container { width: calc(100% - 24px); padding-inline: 16px; }
   .VPNavBar.has-sidebar > .wrapper > .container { max-width: calc(100% - 24px); }
   body:has(.VPDoc) .VPContent { background: var(--pm-canvas); }
@@ -460,6 +462,7 @@ body:has(.VPLocalSearchBox) { overflow: hidden; }
 @media (max-width: 767px) {
   :root { --vp-nav-height: 78px; }
   .VPNavBar { padding-top: 8px; }
+  .VPNavBar.has-sidebar > .wrapper { padding-inline: 8px !important; }
   .VPNavBar > .wrapper > .container { width: calc(100% - 16px); height: 58px; padding-inline: 14px; border-radius: 20px; }
   .VPNavBar.has-sidebar > .wrapper > .container { max-width: calc(100% - 16px); }
   .VPNavBar .content-body,
