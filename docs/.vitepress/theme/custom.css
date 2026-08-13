@@ -86,6 +86,36 @@ body { color: var(--pm-text); background: var(--pm-canvas); }
 .VPNavBarTranslations .text { color: #f6f3fb !important; }
 .VPNavBarMenuLink:hover,
 .VPNavBarMenuGroup .button:hover .text { color: var(--pm-accent-strong) !important; }
+.VPNavBarMenuGroup .button:focus-visible { outline: none !important; }
+.VPNavBarMenuGroup .button:focus-visible .text {
+  border-radius: 8px;
+  outline: 2px solid var(--pm-accent-strong);
+  outline-offset: 5px;
+}
+.VPNavBarMenuGroup .VPMenu,
+.VPNavBarTranslations .VPMenu {
+  padding: 8px;
+  border: 1px solid rgba(205,197,255,.14);
+  border-radius: 18px 18px 7px 18px;
+  color: var(--pm-text);
+  background: rgba(29,29,45,.96);
+  box-shadow: 0 22px 56px rgba(3,3,10,.32), inset 0 1px 0 rgba(255,255,255,.035);
+  backdrop-filter: blur(16px) saturate(120%);
+}
+.VPNavBarMenuGroup .VPMenuLink .link,
+.VPNavBarTranslations .VPMenuLink .link {
+  min-height: 42px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--pm-text-2);
+  transition: color .16s ease, background .16s ease;
+}
+.VPNavBarMenuGroup .VPMenuLink .link:hover,
+.VPNavBarMenuGroup .VPMenuLink .link.active,
+.VPNavBarTranslations .VPMenuLink .link:hover {
+  color: var(--pm-text);
+  background: var(--pm-panel-raised);
+}
 .VPNavBarSearch { flex: 1 1 420px; max-width: 620px; padding-left: 28px; }
 .VPNavBarSearch > div,
 .VPNavBarSearch > div > button { width: 100%; }
