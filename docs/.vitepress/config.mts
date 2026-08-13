@@ -106,8 +106,11 @@ export default defineConfig({
       }
     },
     editLink: {
-      pattern: 'https://github.com/pixel-muse-studio/pixel-muse-docs/edit/main/docs/:path',
-      text: 'Edit this page'
+      pattern: ({ filePath }) => {
+        const koreanSource = filePath.startsWith('ko/') ? filePath : `ko/${filePath}`
+        return `https://github.com/pixel-muse-studio/pixel-muse-docs/edit/main/docs/${koreanSource}`
+      },
+      text: 'Edit Korean source'
     },
     footer: {
       message: 'Built for Pixel Muse Studio projects.',

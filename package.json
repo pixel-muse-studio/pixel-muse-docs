@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress docs",
+    "docs:translate": "node scripts/translate-docs.mjs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
