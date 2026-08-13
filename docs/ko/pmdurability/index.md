@@ -1,4 +1,4 @@
-# 💎 PMdurability
+# PMdurability
 
 > CraftEngine 아이템용 커스텀 내구도 연동 플러그인
 

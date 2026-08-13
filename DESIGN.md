@@ -1,241 +1,250 @@
 ---
 name: Pixel Muse Docs
-description: 실행 가능한 Minecraft 프로젝트 문서를 위한 어두운 픽셀 포스터와 조용한 읽기 표면의 시각 시스템
+description: Minecraft 프로젝트 문서를 위한 Nanitabs 기반의 어두운 크리에이터 도구 워크스페이스
 colors:
-  brand-violet: "#8b46ff"
-  brand-violet-hover: "#7632eb"
-  brand-violet-deep: "#6325cd"
-  poster-accent: "#a99bff"
-  poster-canvas: "#24202f"
-  floating-chrome: "#15121d"
-  floating-field: "#201b2a"
-  home-surface: "#1b1724"
-  code-surface: "#120b20"
-  dark-canvas: "#0d0915"
-  dark-surface: "#191127"
-  text-strong: "#f7f1ff"
-  text-muted: "#c9badc"
-  poster-text-muted: "#d8d0e2"
-  focus-lilac: "#b3a3ff"
-  spark-lime: "#e6f49b"
+  canvas: "#171724"
+  canvas-deep: "#10101a"
+  global-bar: "#14141f"
+  panel: "#202031"
+  panel-raised: "#292842"
+  reading-surface: "#1b1b29"
+  field: "#34324f"
+  accent: "#9d9af6"
+  accent-strong: "#bbb3ff"
+  pink: "#e598df"
+  cream: "#f7e4c9"
+  lime: "#e9ff9c"
+  text: "#faf8ff"
+  text-secondary: "#cdc8dc"
+  text-tertiary: "#9993ab"
+  line: "rgba(205, 197, 255, .14)"
 typography:
   display:
-    fontFamily: "Bricolage Grotesque PM, Pretendard, SUIT, sans-serif"
-    fontSize: "clamp(58px, 7.3vw, 100px)"
+    fontFamily: "Bricolage Grotesque PM, Pretendard, sans-serif"
+    fontSize: "clamp(54px, 7vw, 92px)"
     fontWeight: 800
-    lineHeight: 0.96
-    letterSpacing: "-0.055em"
-  section-heading:
-    fontFamily: "Pretendard, SUIT, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
-    fontSize: "clamp(34px, 4vw, 50px)"
-    lineHeight: 1.18
-    letterSpacing: "-0.055em"
+    lineHeight: 0.98
+    letterSpacing: "-0.04em"
+  document-title:
+    fontFamily: "Pretendard, SUIT, Segoe UI, system-ui, sans-serif"
+    fontSize: "clamp(34px, 4vw, 48px)"
+    fontWeight: 850
+    lineHeight: 1.08
+    letterSpacing: "-0.04em"
   body:
-    fontFamily: "Pretendard, SUIT, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontFamily: "Pretendard, SUIT, Segoe UI, system-ui, sans-serif"
+    fontSize: "16px"
     lineHeight: 1.75
-    letterSpacing: "-0.012em"
   label:
-    fontFamily: "Pretendard, SUIT, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontFamily: "Pretendard, SUIT, Segoe UI, system-ui, sans-serif"
     fontSize: "12px"
     fontWeight: 800
-    letterSpacing: "0.1em"
 rounded:
-  field: "12px"
-  pager: "14px"
-  code: "18px"
-  card: "20px"
-  nav: "22px"
-  feature: "30px"
+  notch: "7px"
+  compact: "16px"
+  code: "22px 22px 8px 22px"
+  card: "22px 22px 7px 22px"
+  panel: "34px 34px 10px 34px"
+  reading: "38px 38px 14px 38px"
+  hero: "42px 42px 14px 42px"
   pill: "999px"
 spacing:
   xs: "8px"
-  sm: "16px"
-  md: "24px"
-  lg: "28px"
-  xl: "56px"
-  section: "112px"
+  sm: "12px"
+  md: "22px"
+  lg: "24px"
+  xl: "40px"
+  section: "96px"
 components:
-  hero-action:
-    textColor: "{colors.text-strong}"
-    rounded: "{rounded.pill}"
-    height: "58px"
-    padding: "0 28px"
-  floating-navigation:
-    backgroundColor: "{colors.floating-chrome}"
-    textColor: "{colors.text-strong}"
-    rounded: "{rounded.nav}"
-    height: "62px"
+  global-bar:
+    backgroundColor: "{colors.global-bar}"
+    textColor: "{colors.text}"
+    rounded: "28px"
+    height: "64px"
     padding: "0 22px"
-  search-field:
-    backgroundColor: "{colors.floating-field}"
-    textColor: "{colors.poster-text-muted}"
-    rounded: "{rounded.field}"
-    height: "38px"
+  global-search:
+    backgroundColor: "#29283b"
+    textColor: "{colors.text-secondary}"
+    rounded: "{rounded.compact}"
+    height: "42px"
+  active-nav-item:
+    backgroundColor: "{colors.accent}"
+    textColor: "#1a1927"
+    rounded: "15px"
+    height: "46px"
+    padding: "11px 14px"
+  hero-action:
+    textColor: "{colors.text}"
+    rounded: "{rounded.pill}"
+    height: "56px"
+    padding: "0 27px"
   code-window:
-    backgroundColor: "{colors.code-surface}"
+    backgroundColor: "{colors.canvas-deep}"
     rounded: "{rounded.code}"
-  home-feature:
-    backgroundColor: "{colors.home-surface}"
-    rounded: "{rounded.feature}"
 ---
 
 # Design System: Pixel Muse Docs
 
 ## Overview
 
-**Creative North Star: "The Pixel Documentation Poster"**
+**Creative North Star: "The Creator Documentation Workbench"**
 
-Pixel Muse Docs는 문서 허브를 카드 모음이 아니라 한 장의 편집 포스터처럼 보이게 한다. 홈은 짙은 보라색 캔버스, 중앙의 초대형 타이포그래피, 문장 안에 삽입된 픽셀 로고, 제한된 장식 기호로 브랜드를 강하게 드러낸다. 픽셀 이미지는 선명하게 유지하고, 인터페이스의 나머지는 현대적인 산세리프와 부드러운 곡률로 받친다.
+Pixel Muse Docs는 Nanitabs에서 영감을 받은 크리에이터 도구 워크스페이스다. 홈과 문서 화면 모두 짙은 남색 캔버스 위에 먹색 전역 바, 비대칭으로 둥근 작업 패널, 라일락 활성 상태를 사용한다. 홈만 별도의 마케팅 테마로 취급하지 않고, 탐색에서 읽기와 예제 복사까지 하나의 제품 UI 안에서 이어지게 한다.
 
-문서 본문으로 이동하면 표현은 의도적으로 조용해진다. 좌측 탐색, 우측 목차, 검색, 언어 변경이라는 문서 구조를 유지하며, 제목·링크·코드 창에만 보라색 정체성을 집중한다. 이 대비는 실제 설정과 YAML, 명령어, Skript, Java 예제를 빠르게 찾고 복사하는 제품 목적을 따른다.
+정보 구조는 문서 도구의 기능을 우선한다. 넓은 검색, 프로젝트 탐색, 언어 변경, 좌측 문서 탐색, 중앙 읽기 표면, 우측 목차를 유지한다. 브랜드는 픽셀 로고와 마스코트, 라일락 레일과 활성 캡슐로 표현하며, 검증된 설정과 실제 예제를 찾는 흐름을 방해하는 장식은 추가하지 않는다.
 
 **Key Characteristics:**
 
-- 어두운 보라색 포스터형 홈과 절제된 읽기 화면의 분리
-- 둥근 독립 캡슐처럼 떠 있는 전역 내비게이션
-- 강한 중앙 타이포그래피와 문장에 결합된 픽셀 브랜드 자산
-- 넓은 구획 간격, 얇은 반투명 경계, 제한된 보라색 강조
-- 실행 예제를 독립된 도구 창처럼 보이게 하는 코드 프레임
+- 홈과 문서를 통합하는 어두운 남색 작업공간
+- 화면 가장자리에서 떠 있는 근검은색 전역 제품 바와 넓은 검색 필드
+- 좌측 프로젝트 탐색, 중앙 읽기 표면, 우측 목차의 데스크톱 3영역 구조
+- 큰 곡률과 한쪽 작은 모서리를 조합한 비대칭 패널
+- 패널 상단의 짧은 라일락 또는 라일락–핑크 노치 레일
+- 라일락 활성 캡슐, 선명한 픽셀 자산, 실제 코드 창
 
 ## Colors
 
-팔레트는 거의 검은 자주색과 먹보라색을 바탕으로, 밝은 라일락을 상호작용과 핵심 문장에 사용한다. 분홍과 연두는 작은 장식에만 등장한다.
+기본 팔레트는 남색에 가까운 저채도 보라 중성색이다. 라일락은 선택과 포커스를, 핑크·크림·라임은 매우 제한된 브랜드 디테일을 담당한다.
 
 ### Primary
 
-- **Muse Violet:** 주요 링크, 활성 상태, 문서 강조, 팁 경계에 사용한다.
-- **Poster Lilac:** 홈의 강조 문장, CTA 경계, 포커스 링, 내비게이션 호버에 사용한다.
+- **Workspace Lilac:** 활성 문서, 주요 경계, CTA, 포커스, 링크에 사용한다.
+- **Bright Lilac:** 링크와 목차 활성 상태처럼 작은 텍스트 강조에 사용한다.
 
 ### Secondary
 
-- **Pixel Pink:** 코드 창 상태 점과 기존 브랜드 그라디언트의 보조색이다. 넓은 본문 표면에는 사용하지 않는다.
-- **Spark Lime:** 포스터의 작은 별 장식 하나에만 쓰는 희소한 대비색이다.
+- **Maker Pink:** 읽기 표면의 상단 노치 그라디언트와 코드 창 상태 점에만 사용한다.
+- **Spark Lime:** 홈의 작은 별 장식에 한정한다.
+- **Warm Cream:** 구현 토큰으로 보존하되 현재 넓은 표면이나 주요 상호작용에는 사용하지 않는다.
 
 ### Neutral
 
-- **Poster Canvas:** 홈 전체의 고정된 어두운 캔버스다.
-- **Floating Chrome:** 전역 내비게이션을 배경에서 분리하는 가장 어두운 표면이다.
-- **Quiet Surface:** 홈의 소개 패널과 일반 문서의 보조 표면을 만든다.
-- **Strong Text / Muted Text:** 제목과 핵심 정보는 거의 흰색, 설명과 메타데이터는 회보라색으로 계층을 나눈다.
+- **Deep Canvas:** 페이지 바깥과 가장 깊은 배경이다.
+- **Workspace Canvas:** 홈과 문서가 공유하는 주 캔버스다.
+- **Near-black Chrome:** 전역 제품 바와 코드 창처럼 가장 집중도가 높은 도구 표면이다.
+- **Panel / Raised Panel:** 탐색, 소개, 목차, 호버 상태의 층을 만든다.
+- **Primary / Secondary / Tertiary Text:** 흰색에 가까운 제목, 회보라 본문, 낮은 대비의 메타 정보 순으로 계층화한다.
 
-**The Purple Restraint Rule.** 보라색은 링크, 포커스, 핵심 제목 일부와 상호작용 상태에 집중한다. 긴 본문이나 큰 일반 표면 전체를 포화 보라색으로 채우지 않는다.
+**The No Lavender Frame Rule.** 라일락은 화면 외곽 프레임이나 대형 배경이 아니다. 활성 캡슐, 짧은 레일, 링크, 포커스처럼 의미 있는 상태에만 사용한다.
 
-**The Home/Reading Split Rule.** 홈의 캔버스는 항상 어둡지만 문서 본문은 VitePress 테마 표면을 따른다. 홈의 포스터 배경을 모든 문서 화면에 강제하지 않는다.
+**The One Workspace Rule.** 홈과 문서의 캔버스·패널·필드·활성색은 동일한 토큰을 사용한다.
 
 ## Typography
 
-**Display Font:** Pretendard, SUIT, Inter와 시스템 산세리프 폴백  
-**Body Font:** Pretendard, SUIT, Inter와 시스템 산세리프 폴백  
-**Code Font:** VitePress의 기본 모노스페이스 스택
+**Display Font:** Bricolage Grotesque PM 800, Pretendard 폴백  
+**Body Font:** Pretendard, SUIT, Segoe UI, system-ui  
+**Code Font:** VitePress 모노스페이스 스택
 
-**Character:** 하나의 한국어 친화적 산세리프 스택을 전 계층에 사용하고, 크기·굵기·자간의 대비로 포스터와 문서 모드를 구분한다. 굵고 촘촘한 제목은 브랜드의 에너지를 만들고, 넉넉한 본문 행간은 긴 설정 설명의 가독성을 지킨다.
+**Character:** 홈의 영문 디스플레이는 굵고 압축된 Bricolage Grotesque로 도구 브랜드의 개성을 만든다. 한국어와 문서 본문은 Pretendard 중심의 산세리프로 안정적인 가독성을 유지한다.
 
 ### Hierarchy
 
-- **Poster Display:** 홈의 한 문장형 주제에만 사용한다. 매우 굵고 촘촘하며 두 줄 이하의 균형 잡힌 줄바꿈을 전제로 한다.
-- **Section Heading:** 홈 소개 구획의 큰 제목이다. 촘촘한 자간과 균형 줄바꿈을 유지한다.
-- **Document Heading:** VitePress 본문 제목은 기본 계층을 유지하되 h1은 850 굵기, h1과 h2는 촘촘한 자간을 쓴다.
-- **Body:** 기본 자간은 약간 좁고, 홈의 설명 문장은 1.65–1.75의 넉넉한 행간을 사용한다.
-- **Label:** 아이브로, 상태, 코드 툴바는 작고 굵게 쓴다. 아이브로는 넓은 자간을 사용하며 코드 파일명은 대소문자를 보존한다.
+- **Home Display:** 54–92px, 800 굵기, 0.98 행간으로 홈의 핵심 문장에만 사용한다.
+- **Document Title:** 34–48px, 850 굵기이며 앞에 픽셀 로고를 인라인 표식으로 둔다.
+- **Section Heading:** h2는 28px, h3는 21px이며 850 굵기와 촘촘한 자간을 공유한다.
+- **Body:** 데스크톱 16px, 1.75 행간이다. 모바일에서는 15px로 축소한다.
+- **Utility Label:** 11–12px, 700–800 굵기로 사이드바 헤더, 빵부스러기, 코드 툴바, 페이지 이동 설명에 사용한다.
 
-**The One Poster Line Rule.** 초대형 디스플레이 서체는 홈의 핵심 문장에만 사용한다. 문서 제목이나 반복 카드 제목에 복제하지 않는다.
+**The Tool Before Poster Rule.** 디스플레이 서체는 홈의 영문 핵심 문장에만 사용한다. 탐색과 긴 한국어 문서에는 본문 서체를 유지한다.
 
 ## Layout
 
-전역 내비게이션은 뷰포트 가장자리에서 떨어진 플로팅 캡슐이다. 데스크톱에서 좌우 20px 여백, 최대 너비 1500px, 높이 62px를 사용하며 로고·검색·메뉴·언어·테마 기능을 한 줄에 유지한다. 검색은 가능한 공간을 우선 점유하되 최대 540px이며, 768–1080px에서는 사이트 제목 텍스트를 숨겨 탐색 기능을 보존한다.
+전역 제품 바는 상단 16px에서 시작하며 좌우 20px 여백, 최대 너비 1540px, 높이 64px다. 검색은 420px의 유연한 기준 폭과 최대 620px를 갖고, 로고·프로젝트 메뉴·언어·테마 기능과 한 줄에 배치된다.
 
-홈의 주요 콘텐츠 폭은 1180px이다. 첫 화면은 최소 높이 690px의 중앙 정렬 포스터로, 상단 132px의 숨을 두고 제목, 설명, CTA 순서로 쌓는다. 이어지는 세 개의 주요 경로는 카드 대신 하나의 가로 밴드를 3등분하며, 소개 영역은 1.05:0.95, 원칙 영역은 0.92:1.08의 비대칭 2열을 사용한다. 주요 홈 구획 간 기본 간격은 104–112px이다.
+960px 이상 문서 화면은 좌측 256px 프로젝트 탐색 패널, 중앙 읽기 표면, 우측 목차로 구성된다. 콘텐츠는 상단 110px, 좌우 24px의 작업공간 여백을 갖는다. 중앙 패널 내부의 실제 읽기 폭은 최대 760px이고 전체 컨테이너는 최대 1280px다. 우측 목차는 중앙 패널 안에서 별도 상승 표면으로 묶인다.
 
-문서 화면은 짙은 남보라색 작업 공간 안에 좌측 탐색 패널과 중앙 읽기 캔버스가 놓이는 형태다. 좌측 사이드바, 중앙 읽기 열, 우측 목차 구조를 유지하며, 라일락은 현재 문서와 검색·코드·포커스 같은 실제 상호작용에만 사용한다. 본문은 하나의 긴 면을 유지하고 표는 읽기 열 너비를 전부 사용한다. 빵부스러기는 작은 캡슐로 본문 제목 앞에 놓인다.
+홈 콘텐츠는 최대 1240px이다. 히어로는 중앙 포스터가 아니라 좌측 정렬된 620px 높이의 작업 패널이며, 오른쪽 34%에 불규칙한 라일락 레일 면이 들어간다. 주요 경로는 3열 도구 카드, 프로젝트 소개는 1:1, 원칙은 0.9:1.1의 비대칭 2열이다. 주요 섹션 간격은 96px이다.
 
 반응형 규칙:
 
-- **959px 이하:** 내비게이션 외곽 여백을 12px로 줄이고 소개·원칙을 단일 열로 전환한다. 포스터 높이와 상단 여백, 이미지 크기도 축소한다.
-- **767px 이하:** 내비게이션은 높이 58px, 외곽 여백 8px가 된다. 검색은 40px 아이콘 버튼으로 축약되고 홈 경로 밴드는 세로 목록이 된다.
-- **640px 이하:** 포스터 제목은 45–64px 범위, 설명은 16px이 된다. 홈 본문 좌우 여백은 18px, 구획 간격은 76px로 줄며 마스코트 스트립은 세로로 쌓인다.
+- **1100px 이하:** 사이트명 텍스트를 숨기고 검색 최대 폭을 430px로 줄인다. 히어로 우측 레일의 폭과 불투명도를 낮춘다.
+- **959px 이하:** 전역 바 외곽 여백을 12px로 줄인다. 데스크톱 작업 패널 배치를 해제하고 소개·원칙을 단일 열로 만든다.
+- **767px 이하:** 전역 바는 상단 8px, 좌우 8px, 높이 58px이 된다. 검색은 42px 아이콘 버튼으로 축약된다. 문서 외곽 곡률은 제거하고 홈 경로 카드는 단일 열이 된다.
+- **모바일 홈:** 히어로는 560px 높이와 24px 좌우 패딩을 사용한다. 라일락 레일은 우측 세로 면에서 하단 30%의 톱니형 면으로 변하고 별 장식은 숨긴다.
 
-**The Navigation Survival Rule.** 중간 폭에서는 브랜드 텍스트를 먼저 숨기고 검색, 프로젝트 탐색, 언어 변경을 유지한다.
+**The Navigation Survival Rule.** 좁은 화면에서는 사이트명과 장식을 먼저 줄이고 검색, 프로젝트 탐색, 언어 변경을 유지한다.
 
 ## Elevation & Depth
 
-깊이는 어두운 톤의 층, 반투명 1px 경계, 넓고 낮은 대비의 그림자를 조합해 만든다. 플로팅 내비게이션은 주변 캔버스에서 확실히 떠 있지만, 일반 문서 표면은 평평하게 유지한다. 홈의 픽셀 이미지는 드롭 섀도로 분리하고, 보라색 방사형 블러는 배경 분위기로만 사용한다.
+깊이는 캔버스와 패널의 명도 차이, 반투명 1px 경계, 넓고 어두운 그림자로 만든다. 모든 요소를 띄우지 않고, 전역 바와 주요 작업 패널·검색 모달·코드 창에만 구조적 그림자를 사용한다. 내부 표면은 미세한 인셋 하이라이트로 재질을 구분한다.
 
 ### Shadow Vocabulary
 
-- **Floating Chrome:** 넓고 얕은 그림자로 내비게이션의 독립된 캡슐 형태를 만든다 (`0 14px 36px rgba(10, 7, 18, .16)`).
-- **Home Panel:** 어두운 소개 패널 아래에 큰 확산 그림자를 둔다 (`0 28px 70px rgba(8, 5, 14, .22)`).
-- **Code Window:** 코드 예제를 본문의 도구 표면으로 띄운다 (`0 16px 38px rgba(38, 15, 61, .09)`).
-- **Interactive Lift:** 기능 카드와 버튼은 호버에서만 1–5px 상승하며 경계 대비를 함께 높인다.
+- **Workspace Panel:** 좌측 탐색과 중앙 읽기 표면에 사용한다 (`0 24px 64px rgba(3, 3, 10, .28)`).
+- **Global Bar:** 근검은 제품 바를 캔버스에서 분리한다 (`0 18px 48px rgba(4, 4, 11, .28)`).
+- **Code Window:** 실제 예제를 독립된 도구 창으로 보이게 한다 (`0 18px 46px rgba(4, 3, 10, .25)`).
+- **Search Modal:** 집중 작업을 위해 가장 깊은 그림자를 사용한다 (`0 32px 92px rgba(3, 3, 9, .5)`).
 
-**The Quiet Reading Rule.** 그림자는 홈의 큰 패널, 플로팅 내비게이션, 코드 창과 상호작용 피드백에만 사용한다. 일반 문서 문단과 표를 카드화하지 않는다.
+**The Structural Shadow Rule.** 그림자는 화면 계층을 설명해야 한다. 일반 문단, 목록, 표의 각 행에는 그림자를 사용하지 않는다.
 
 ## Shapes
 
-형태 언어는 둥근 현대적 인터페이스와 각진 픽셀 자산의 대비다. 검색 입력은 12px, 문서 페이지 이동은 14px, 코드 창은 18px, 내비게이션은 22px, 큰 홈 패널은 28–30px 곡률을 사용한다. 태그와 주 CTA는 완전한 필 형태다. 경계는 대부분 1px 반투명 보라 또는 흰색이며, CTA만 2px 라일락 경계를 사용한다.
+기본 형태는 큰 곡률의 작업 패널과 작은 절단 모서리를 결합한 비대칭 실루엣이다. 좌측 탐색은 `34px 34px 14px 34px`, 중앙 읽기는 `38px 38px 14px 38px`, 홈 히어로는 `42px 42px 14px 42px`이다. 카드·코드·페이지 이동은 우하단만 7–8px로 줄여 같은 계보를 유지한다.
 
-픽셀 로고와 마스코트에는 항상 픽셀 렌더링을 유지한다. 홈의 네 방향 별은 CSS 클립 패스로 만들며, 작은 장식으로만 사용한다.
+활성 탐색과 태그, 빵부스러기, CTA는 완전한 캡슐이다. 주요 작업 패널 상단에는 짧은 8–10px 높이의 노치 레일을 붙인다. 픽셀 로고와 마스코트는 이미지 보간 없이 선명하게 렌더링한다.
 
-**The Soft Chrome, Sharp Pixel Rule.** UI 표면은 부드럽게 둥글리고 브랜드 이미지는 선명한 픽셀 가장자리를 보존한다. 픽셀 자산에 블러나 일반 이미지 보간을 적용하지 않는다.
+**The Asymmetric Corner Rule.** 큰 패널과 도구 카드는 우하단 곡률을 더 작게 유지한다. 모든 표면을 동일한 대칭 라운드 카드로 만들지 않는다.
 
 ## Components
 
-### Floating Navigation
+### Global Product Bar
 
-- **Shape:** 화면 가장자리에서 분리된 22px 곡률의 어두운 캡슐이다.
-- **Content:** 픽셀 로고, 사이트명, 넓은 검색, 프로젝트 메뉴, 언어, 테마 순서를 유지한다.
-- **Search:** 더 밝은 어두운 표면과 얇은 흰색 경계를 사용하며 호버에서 라일락 경계를 강화한다.
-- **Responsive:** 모바일에서는 높이와 여백을 줄이고 검색을 아이콘 버튼으로 축약한다.
+- **Shape:** 28px 곡률, 64px 높이의 근검은 플로팅 바다.
+- **Contents:** 픽셀 로고와 사이트명, 폭넓은 검색, 프로젝트 메뉴, 언어, 테마 순서를 유지한다.
+- **Search:** 42px 높이, 16px 곡률의 넓은 필드다. 호버에서 배경과 라일락 경계 대비만 높인다.
+- **Responsive:** 중간 폭에서는 사이트명을 숨기고 모바일에서는 검색을 정사각 아이콘으로 축약한다.
 
-### Poster Hero
+### Project Navigation
 
-- **Composition:** 중앙 정렬된 초대형 문장 안에 픽셀 로고를 글자처럼 삽입하고, 마지막 행만 라일락으로 강조한다.
-- **Supporting Copy:** 최대 740px의 설명을 충분한 상단 여백과 함께 배치한다.
-- **Decoration:** 좌우 별 두 개와 매우 약한 중앙 라일락 광원만 허용한다. 별은 모바일에서 숨긴다.
-- **Action:** 58px 높이의 투명한 필 버튼에 2px 라일락 경계를 사용한다. 호버 시 라일락으로 채우고 2px 상승시키며 화살표를 4px 이동한다.
+- **Panel:** 데스크톱에서 독립된 256px 먹보라 패널이며 상단에 `Pixel Muse` 라벨과 86×8px 라일락 레일을 둔다.
+- **Items:** 항목은 최소 46px 높이와 15px 곡률이다. 호버 시 2px 오른쪽으로 이동한다.
+- **Active:** 라일락으로 완전히 채우고 어두운 글자를 사용해 선택 상태를 명확히 한다.
 
-### Home Path Band
+### Reading Surface
 
-- **Structure:** 하나의 가로 밴드를 세 등분하고 바깥쪽에는 위·아래 경계만 둔다.
-- **Content:** 각 항목은 굵은 목적명과 작은 설명 한 줄로 구성한다.
-- **State:** 호버 시 라일락이 아주 옅게 깔린다. 모바일에서는 세로 목록과 가로 구분선으로 바뀐다.
+- **Panel:** 하나의 긴 중앙 작업 표면이며 상단에 190×10px 라일락–핑크 레일이 있다.
+- **Title:** 픽셀 로고가 제목 앞의 제품 표식으로 나타난다.
+- **Outline:** 우측 목차는 `26px 26px 9px 26px` 곡률의 상승 패널이다. 활성 링크만 밝은 라일락이다.
+- **Content:** h2는 58px 위 간격과 얇은 구분선, h3는 38px 위 간격을 사용한다. 앵커는 제목 호버나 키보드 포커스에서만 나타난다.
+- **Supporting Surfaces:** 빵부스러기는 필 캡슐, 인용문·사용자 블록·표는 비대칭 저대비 표면이다.
 
-### Home Panels
+### Code Window
 
-- **Intro:** 어두운 단색 표면, 30px 곡률, 얇은 밝은 경계와 깊은 확산 그림자를 사용한다. 설명과 실제 YAML 창을 2열로 배치한다.
-- **Principles:** 별도 카드 없이 넓은 여백과 수평 구분선으로 원칙을 나열한다.
-- **Mascot Strip:** 거의 검은 보라 표면과 얇은 경계 안에 픽셀 마스코트와 짧은 브랜드 문장을 배치한다. 그림자는 사용하지 않는다.
+- **Shape:** `22px 22px 8px 22px` 곡률과 라일락 반투명 경계를 사용한다.
+- **Toolbar:** 48px 높이의 어두운 바에 핑크·라일락·회보라 상태 점과 파일명 또는 언어명을 둔다.
+- **Code:** 동일한 근검은 표면을 이어 쓰며 상하 22–24px 여백을 둔다. 기본 언어 배지와 중첩 테두리는 제거한다.
+- **Purpose:** YAML, 명령어, Skript, Java처럼 복사 가능한 실제 예제를 즉시 식별하게 한다.
 
-### Code Windows
+### Home Workspace
 
-- **Surface:** 진한 자주색 배경, 18px 곡률, 반투명 보라 경계의 독립 창이다.
-- **Toolbar:** 최소 높이 42px이며, 왼쪽에는 세 개의 8px 상태 점, 오른쪽에는 언어 또는 파일명을 둔다.
-- **Code:** 툴바 아래 코드는 같은 배경을 이어 쓰고 위 20px, 아래 22px의 여백을 둔다. 중첩된 기본 코드 테두리와 언어 배지는 제거한다.
-- **Purpose:** YAML, Skript, Java 등 복사 가능한 실행 예제를 본문 설명보다 빠르게 식별하게 한다.
+- **Hero:** 좌측 정렬된 대형 문장과 설명, CTA를 한 작업 패널 안에 둔다. 오른쪽은 불규칙한 라일락 레일 면이며 픽셀 로고가 문장 안에 들어간다.
+- **Path Cards:** 세 개의 비대칭 도구 카드로 프로젝트, 예제, 검색 진입점을 제공한다.
+- **Project Panel:** 설명과 실제 YAML 코드 창을 1:1로 배치한다.
+- **Principles:** 카드 반복 대신 구분선 목록으로 설정→예제→연동 흐름을 설명한다.
+- **Mascot Panel:** 동일한 패널 재질 안에서 픽셀 마스코트와 짧은 브랜드 문장을 결합한다.
 
-### Reading Navigation
+### Search Panel
 
-- **Workspace Canvas:** 모든 화면에서 짙은 남보라색 캔버스를 사용한다. 라일락은 외곽 프레임이 아니라 활성 탐색, 검색, 코드 예제와 포커스 상태의 의미 있는 강조색이다.
-- **Breadcrumbs:** 13px의 절제된 메타 텍스트를 어두운 작은 캡슐 안에 두고 현재 위치만 브랜드 보라로 강조한다.
-- **Sidebar:** 독립된 먹보라 패널이며 상단의 짧은 라일락 레일로 위치를 표시한다. 최상위 항목은 800 굵기이며 현재 문서는 라일락 캡슐과 어두운 글자로 구분한다.
-- **Outline:** 우측 목차는 본문보다 한 단계 밝은 작은 보조 패널로 묶고, 한쪽 모서리를 더 작게 만들어 제품 UI의 비대칭 형태를 반영한다.
-- **Previous / Next:** 최소 높이 92px, 14px 곡률의 낮은 대비 표면이다. 호버에서 브랜드 경계와 2px 상승을 사용한다.
-- **Search Modal:** 18px 곡률의 셸과 50px 입력을 사용한다. 최근 검색은 작은 라벨과 9px 곡률의 칩으로 표시한다.
+- **Shell:** `28px 28px 10px 28px` 곡률의 도구 모달이며 어두운 백드롭 위에 뜬다.
+- **Input:** 최소 54px 높이, 16px 곡률의 넓은 필드다.
+- **History:** 최근 검색어는 작은 라벨 아래 라일락 계열 필 칩으로 최대 3개 표시한다.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** 홈에서 픽셀 로고와 마스코트를 실제 브랜드 자산으로 사용하고 픽셀 렌더링을 보존한다.
-- **Do** 문서 본문에서는 제목, 링크, 코드 예제, 탐색 상태에만 브랜드 표현을 집중한다.
-- **Do** 설정 키, 명령어, 코드, 플러그인명은 모노스페이스 또는 코드 표면에서 원문 그대로 표시한다.
-- **Do** 검색, 프로젝트 탐색, 언어 변경, 좌측 사이드바와 우측 목차를 핵심 구조로 유지한다.
-- **Do** 모든 키보드 포커스에 3px 라일락 외곽선과 3px 오프셋을 제공한다.
-- **Do** `prefers-reduced-motion`에서 전환과 애니메이션 시간을 사실상 제거하고 자동 스크롤 동작을 끈다.
+- **Do** 홈과 문서에 같은 캔버스, 패널, 비대칭 곡률, 라일락 활성 상태를 사용한다.
+- **Do** 검색, 프로젝트 탐색, 언어 변경, 좌측 탐색과 우측 목차를 제품 구조로 유지한다.
+- **Do** 실제 설정과 완성 예제를 코드 창으로 우선 노출하고 설정 키·명령어·플러그인명은 번역하지 않는다.
+- **Do** 픽셀 로고와 마스코트에 `image-rendering: pixelated`를 유지한다.
+- **Do** 키보드 포커스에 3px 밝은 라일락 외곽선과 3px 오프셋을 제공한다.
+- **Do** `prefers-reduced-motion`에서 부드러운 스크롤을 끄고 애니메이션·전환 시간을 사실상 제거한다.
 
 ### Don't:
 
-- **Don't** 고객 수, 최초·유일 같은 검증되지 않은 상업적 주장을 시각적 배지나 카피로 추가하지 않는다.
-- **Don't** 일반 문서 문단을 반복적인 둥근 카드로 감싸 포스터 홈의 표현 밀도를 본문에 복제하지 않는다.
-- **Don't** 큰 장식 그라디언트, 과도한 글로우, 다수의 별 모티프를 추가하지 않는다.
-- **Don't** 좁은 화면에서 검색과 언어 변경을 제거하지 않는다. 공간이 부족하면 제목과 장식을 먼저 축약한다.
-- **Don't** 장식 모션을 상시 반복하지 않는다. 구현된 움직임은 호버의 짧은 상승과 화살표 이동뿐이다.
+- **Don't** 홈을 별도의 포스터 테마로 만들거나 문서 화면을 기본 VitePress 외형으로 되돌리지 않는다.
+- **Don't** 화면 전체를 감싸는 라벤더 외곽 프레임이나 넓은 라일락 배경을 추가하지 않는다.
+- **Don't** 모든 표면을 대칭 라운드 카드로 만들지 않는다. 노치 레일과 작은 우하단 모서리를 유지한다.
+- **Don't** 좁은 화면에서 핵심 탐색 기능을 제거하지 않는다. 사이트명과 장식을 먼저 축약한다.
+- **Don't** 고객 수, 최초·유일 등 검증되지 않은 제품 주장을 배지나 카피로 추가하지 않는다.
+- **Don't** 지속적으로 반복되는 장식 모션을 추가하지 않는다. 구현된 움직임은 짧은 호버 이동과 상태 전환뿐이다.
