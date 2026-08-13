@@ -34,6 +34,12 @@ function assertSafeTranslation(source, english, fileName) {
   if (ratio < 0.35 || ratio > 2.5) throw new Error(`Suspicious translation length for ${fileName}: ${ratio.toFixed(2)}`)
 }
 
+function assertSafeFallback(english, fileName) {
+  if (!english.trim()) throw new Error(`Empty fallback translation: ${fileName}`)
+  if (english.includes('PMXPROTECTED')) throw new Error(`Unrestored token in fallback: ${fileName}`)
+  if (/<script\b|javascript:|on(?:load|error|click)\s*=/i.test(english)) throw new Error(`Unsafe executable HTML in fallback: ${fileName}`)
+}
+
 async function markdownFiles(dir) {
   const entries = await readdir(dir, { withFileTypes: true })
   const files = []
@@ -119,7 +125,9 @@ for (const sourcePath of await markdownFiles(sourceRoot)) {
     } catch (error) {
       try {
         english = await readFile(outputPath, 'utf8')
-        assertSafeTranslation(source, english, fileName)
+        // The Korean source may have gained sections while the last English file
+        // remains intentionally stale during an upstream outage.
+        assertSafeFallback(english, fileName)
         process.stderr.write(`::warning file=docs/ko/${fileName}::Automatic translation is temporarily unavailable. Keeping the previous English document.\n`)
       } catch {
         throw error
