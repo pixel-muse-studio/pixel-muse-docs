@@ -41,6 +41,7 @@ export default defineConfig({
   description: 'Example-first documentation for Pixel Muse Studio projects',
   base: '/pixel-muse-docs/',
   cleanUrls: true,
+  appearance: false,
   lastUpdated: true,
   markdown: {
     config(md) {
@@ -75,8 +76,7 @@ export default defineConfig({
         docFooter: { prev: '이전 문서', next: '다음 문서' },
         lastUpdated: { text: '마지막 업데이트' },
         returnToTopLabel: '맨 위로',
-        sidebarMenuLabel: '메뉴',
-        darkModeSwitchLabel: '테마'
+        sidebarMenuLabel: '메뉴'
       }
     }
   },
@@ -104,7 +104,6 @@ export default defineConfig({
     lastUpdated: { text: 'Last updated' },
     returnToTopLabel: 'Back to top',
     sidebarMenuLabel: 'Menu',
-    darkModeSwitchLabel: 'Theme',
     editLink: {
       pattern: ({ filePath }) => {
         const koreanSource = filePath.startsWith('ko/') ? filePath : `ko/${filePath}`

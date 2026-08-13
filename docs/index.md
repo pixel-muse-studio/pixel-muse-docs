@@ -7,7 +7,7 @@ pageClass: pixel-muse-home
 <section class="pm-poster-hero">
   <span class="pm-spark pm-spark--left" aria-hidden="true"></span>
   <span class="pm-spark pm-spark--right" aria-hidden="true"></span>
-  <h1><span>Build with</span><img src="/brand/pixel-muse-icon.png" alt="" aria-hidden="true"><span>Pixel Muse</span><strong>ship with docs</strong></h1>
+  <h1><a href="https://mcmodels.net/vendors/284/pixel-muse-studio">Pixel Muse Studio</a></h1>
   <p>From Minecraft project configuration to integration APIs.<br>Documentation you can copy, apply, and test immediately.</p>
   <a class="pm-hero-action" href="./projects/">View projects <span aria-hidden="true">→</span></a>
 </section>

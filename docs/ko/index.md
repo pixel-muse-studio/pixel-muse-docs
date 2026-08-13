@@ -15,12 +15,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="pm-poster-hero">
   <span class="pm-spark pm-spark--left" aria-hidden="true"></span>
   <span class="pm-spark pm-spark--right" aria-hidden="true"></span>
-  <h1>
-    <span>Build with</span>
-    <img src="/brand/pixel-muse-icon.png" alt="" aria-hidden="true">
-    <span>Pixel Muse</span>
-    <strong>ship with docs</strong>
-  </h1>
+  <h1><a href="https://mcmodels.net/vendors/284/pixel-muse-studio">Pixel Muse Studio</a></h1>
   <p>Minecraft 프로젝트의 설정부터 연동 API까지.<br>복사하고, 적용하고, 바로 테스트할 수 있는 문서입니다.</p>
   <a class="pm-hero-action" href="./projects/">프로젝트 보기 <span aria-hidden="true">→</span></a>
 </section>
