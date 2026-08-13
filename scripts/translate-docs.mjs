@@ -17,6 +17,7 @@ const protectedTerms = [
   'PlaceholderAPI', 'Skript', 'Java', 'YAML', 'JSON', 'PDC', 'HEX', 'Tint',
   'UUID', 'Mending', 'Unbreaking', 'Unbreakable', 'Minecraft', 'max_damage'
 ]
+let providerUnavailableReason = ''
 
 function assertSafeSource(source, fileName) {
   if (Buffer.byteLength(source, 'utf8') > 250_000) throw new Error(`Source document is too large: ${fileName}`)
@@ -65,6 +66,7 @@ function protectMarkdown(markdown) {
 }
 
 async function translate(markdown, fileName) {
+  if (providerUnavailableReason) throw new Error(providerUnavailableReason)
   const { text, restore } = protectMarkdown(markdown)
   const request = () => fetch('https://models.github.ai/inference/chat/completions', {
       method: 'POST',
@@ -95,7 +97,12 @@ async function translate(markdown, fileName) {
     process.stderr.write(`Translation service unavailable for ${fileName}; retrying (${attempt}/3).\n`)
     await new Promise((resolve) => setTimeout(resolve, attempt * 5000))
   }
-  if (!response.ok) throw new Error(`Translation request failed (${response.status}): ${await response.text()}`)
+  if (!response.ok) {
+    const detail = await response.text()
+    const message = `Translation request failed (${response.status}): ${detail}`
+    if (response.status === 410 || response.status >= 500) providerUnavailableReason = message
+    throw new Error(message)
+  }
   const payload = await response.json()
   let content = payload.choices?.[0]?.message?.content?.trim()
   if (!content) throw new Error(`Translation returned no content for ${fileName}`)
