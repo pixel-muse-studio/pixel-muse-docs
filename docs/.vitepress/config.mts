@@ -81,7 +81,7 @@ export default defineConfig({
         { text: 'PMdurability', link: '/pmdurability/' }
       ] }
     ],
-    sidebar: enSidebar,
+    sidebar: { ...enSidebar, ...koSidebar },
     outline: { level: [2, 3], label: 'On this page' },
     docFooter: { prev: 'Previous', next: 'Next' },
     lastUpdated: { text: 'Last updated' },
@@ -99,7 +99,6 @@ export default defineConfig({
             { text: 'PMdurability', link: '/ko/pmdurability/' }
           ] }
         ],
-        sidebar: koSidebar,
         outline: { level: [2, 3], label: '이 페이지에서' },
         docFooter: { prev: '이전 문서', next: '다음 문서' },
         lastUpdated: { text: '마지막 업데이트' },

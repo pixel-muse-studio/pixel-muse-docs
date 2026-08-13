@@ -4,16 +4,12 @@ pageClass: pixel-muse-home
 
 hero:
   name: Pixel Muse Studio
-  text: 상상을 플레이 가능한 세계로
   tagline: Minecraft 프로젝트의 설정부터 연동 API까지. 실제 서버에서 바로 사용할 수 있는 예제 중심 공식 문서입니다.
   image:
     src: /brand/pixel-muse-icon-1000.png
     alt: Pixel Muse Studio pixel logo
   actions:
     - theme: brand
-      text: 문서 시작하기
-      link: /ko/guide/
-    - theme: alt
       text: 프로젝트 보기
       link: /ko/projects/
 

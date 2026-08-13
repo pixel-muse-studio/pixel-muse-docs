@@ -1,5 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { inBrowser } from 'vitepress'
+import { h } from 'vue'
+import Breadcrumbs from './Breadcrumbs.vue'
 import './custom.css'
 
 const BASE = '/pixel-muse-docs/'
@@ -58,12 +60,20 @@ function startClientEnhancements() {
     const anchor = (event.target as HTMLElement).closest('a')
     if (!anchor) return
     const url = new URL(anchor.href, location.href)
-    if (url.pathname === BASE) localStorage.setItem('pm-docs-language', 'en')
-    if (url.pathname === `${BASE}ko/`) localStorage.setItem('pm-docs-language', 'ko')
+    if (anchor.closest('.VPNavBarTranslations, .translations')) {
+      localStorage.setItem('pm-docs-language', url.pathname.startsWith(`${BASE}ko/`) ? 'ko' : 'en')
+    }
   })
-  if (location.pathname === BASE && !localStorage.getItem('pm-docs-language') && !sessionStorage.getItem('pm-language-routed') && isKoreanVisitor()) {
-    sessionStorage.setItem('pm-language-routed', '1')
-    location.replace(`${BASE}ko/`)
+  const savedLanguage = localStorage.getItem('pm-docs-language')
+  const isKoreanPath = location.pathname.startsWith(`${BASE}ko/`)
+  const relativePath = location.pathname.slice(BASE.length)
+  const shouldUseKorean = savedLanguage === 'ko' || (!savedLanguage && isKoreanVisitor())
+  if (shouldUseKorean && !isKoreanPath) {
+    location.replace(`${BASE}ko/${relativePath}${location.search}${location.hash}`)
+    return
+  }
+  if (savedLanguage === 'en' && isKoreanPath) {
+    location.replace(`${BASE}${relativePath.slice(3)}${location.search}${location.hash}`)
     return
   }
   const observer = new MutationObserver(enhanceSearchHistory)
@@ -73,6 +83,9 @@ function startClientEnhancements() {
 
 export default {
   ...DefaultTheme,
+  Layout: () => h(DefaultTheme.Layout, null, {
+    'doc-before': () => h(Breadcrumbs)
+  }),
   enhanceApp() {
     if (inBrowser) setTimeout(startClientEnhancements, 0)
   }

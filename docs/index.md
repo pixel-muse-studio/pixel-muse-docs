@@ -4,16 +4,12 @@ pageClass: pixel-muse-home
 
 hero:
   name: Pixel Muse Studio
-  text: Turn ideas into playable worlds
   tagline: Example-first documentation for Minecraft projects—from configuration to production-ready integrations.
   image:
     src: /brand/pixel-muse-icon-1000.png
     alt: Pixel Muse Studio pixel logo
   actions:
     - theme: brand
-      text: Start reading
-      link: /guide/
-    - theme: alt
       text: Explore projects
       link: /projects/
 
