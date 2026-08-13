@@ -60,7 +60,25 @@ export default defineConfig({
   },
   locales: {
     root: { label: 'English', lang: 'en-US', link: '/' },
-    ko: { label: '한국어', lang: 'ko-KR', link: '/ko/' }
+    ko: {
+      label: '한국어',
+      lang: 'ko-KR',
+      link: '/ko/',
+      themeConfig: {
+        nav: [
+          { text: '가이드', link: '/ko/guide/' },
+          { text: '프로젝트', items: [
+            { text: 'PMdurability', link: '/ko/pmdurability/' }
+          ] }
+        ],
+        outline: { level: [2, 3], label: '이 페이지에서' },
+        docFooter: { prev: '이전 문서', next: '다음 문서' },
+        lastUpdated: { text: '마지막 업데이트' },
+        returnToTopLabel: '맨 위로',
+        sidebarMenuLabel: '메뉴',
+        darkModeSwitchLabel: '테마'
+      }
+    }
   },
   head: [
     ['meta', { name: 'theme-color', content: '#7c36ef' }],
@@ -87,24 +105,6 @@ export default defineConfig({
     returnToTopLabel: 'Back to top',
     sidebarMenuLabel: 'Menu',
     darkModeSwitchLabel: 'Theme',
-    locales: {
-      ko: {
-        label: '한국어',
-        selectText: '언어',
-        nav: [
-          { text: '가이드', link: '/ko/guide/' },
-          { text: '프로젝트', items: [
-            { text: 'PMdurability', link: '/ko/pmdurability/' }
-          ] }
-        ],
-        outline: { level: [2, 3], label: '이 페이지에서' },
-        docFooter: { prev: '이전 문서', next: '다음 문서' },
-        lastUpdated: { text: '마지막 업데이트' },
-        returnToTopLabel: '맨 위로',
-        sidebarMenuLabel: '메뉴',
-        darkModeSwitchLabel: '테마'
-      }
-    },
     editLink: {
       pattern: ({ filePath }) => {
         const koreanSource = filePath.startsWith('ko/') ? filePath : `ko/${filePath}`

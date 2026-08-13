@@ -42,7 +42,7 @@ body { width: 100%; letter-spacing: -.012em; }
 }
 .VPNavBarSearch .DocSearch-Button:hover,
 .VPNavBarSearch button:hover { border-color: rgba(139, 70, 255, .52); background: rgba(139, 70, 255, .1); box-shadow: 0 8px 24px rgba(93, 41, 153, .1); }
-.VPNavBarMenu { display: flex !important; flex-shrink: 0; gap: 8px; }
+.VPNavBarMenu { flex-shrink: 0; gap: 8px; }
 .VPNavBarTranslations { flex: 0 0 auto; margin-left: 2px; }
 .VPNavBarMenuGroup .button { padding: 0 12px; font-weight: 700; }
 .VPButton.brand { border-color: #8b46ff !important; background: linear-gradient(135deg, #7836ef, #b137ff) !important; box-shadow: 0 10px 28px rgba(127, 48, 242, .25); }
@@ -183,9 +183,6 @@ body { width: 100%; letter-spacing: -.012em; }
 .vp-doc table { display: table; width: 100%; }
 .vp-doc .tip.custom-block { border-color: #9b55ff; }
 .VPSidebarItem.level-0 > .item .text { font-weight: 800; }
-.VPSidebar { left: 0 !important; width: 272px !important; padding-left: 18px !important; padding-right: 18px !important; border-right: 1px solid rgba(139, 70, 255, .08); }
-.VPDoc .aside-container { right: 12px !important; }
-.VPDoc .aside { padding-left: 18px; }
 
 .pm-breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 24px; color: var(--vp-c-text-3); font-size: 13px; }
 .pm-breadcrumbs a { color: var(--vp-c-text-2); font-weight: 650; text-decoration: none; }
@@ -209,6 +206,19 @@ body { width: 100%; letter-spacing: -.012em; }
   .brand-intro { padding: 38px 28px; }
   .brand-principles { padding: 32px 8px; }
   .brand-principles > div { max-width: 640px; }
+}
+
+@media (min-width: 768px) {
+  .VPNavBarMenu { display: flex !important; }
+}
+
+@media (min-width: 960px) {
+  .VPSidebar { left: 0 !important; width: 272px !important; padding-left: 18px !important; padding-right: 18px !important; border-right: 1px solid rgba(139, 70, 255, .08); }
+}
+
+@media (min-width: 1280px) {
+  .VPDoc .aside-container { right: 12px !important; }
+  .VPDoc .aside { padding-left: 18px; }
 }
 
 @media (max-width: 767px) {

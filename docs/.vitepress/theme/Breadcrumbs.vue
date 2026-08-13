@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, withBase } from 'vitepress'
 
 const route = useRoute()
 const labels: Record<string, { en: string; ko: string }> = {
@@ -14,16 +14,16 @@ const labels: Record<string, { en: string; ko: string }> = {
 }
 
 const crumbs = computed(() => {
-  const parts = route.path.split('/').filter(Boolean)
+  const parts = route.path.split('/').filter(Boolean).filter((part) => part !== 'pixel-muse-docs')
   const korean = parts[0] === 'ko'
   const segments = korean ? parts.slice(1) : parts
   const prefix = korean ? '/ko' : ''
-  const result = [{ label: korean ? '문서' : 'Docs', href: `${prefix}/` }]
+  const result = [{ label: korean ? '문서' : 'Docs', href: withBase(`${prefix}/`) }]
   let path = prefix
   for (const segment of segments) {
     path += `/${segment}`
     const pair = labels[segment]
-    result.push({ label: pair ? pair[korean ? 'ko' : 'en'] : segment.replace(/-/g, ' '), href: `${path}/` })
+    result.push({ label: pair ? pair[korean ? 'ko' : 'en'] : segment.replace(/-/g, ' '), href: withBase(`${path}/`) })
   }
   return result
 })
