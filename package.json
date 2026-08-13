@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "test": "node --test scripts/*.test.mjs",
     "docs:dev": "vitepress dev docs",
     "docs:translate": "node scripts/translate-docs.mjs",
     "docs:build": "vitepress build docs",

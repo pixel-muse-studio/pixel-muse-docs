@@ -13,6 +13,19 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 -->
 
 <section class="pm-poster-hero">
+  <svg class="pm-goo-filter" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="pm-goo" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur" />
+        <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -12" />
+      </filter>
+    </defs>
+  </svg>
+  <span class="pm-goo-field" aria-hidden="true">
+    <i class="pm-goo-blob pm-goo-blob--one"></i>
+    <i class="pm-goo-blob pm-goo-blob--two"></i>
+    <i class="pm-goo-blob pm-goo-blob--three"></i>
+  </span>
   <span class="pm-spark pm-spark--left" aria-hidden="true"></span>
   <span class="pm-spark pm-spark--right" aria-hidden="true"></span>
   <h1><a href="https://mcmodels.net/vendors/284/pixel-muse-studio">Pixel Muse Studio</a></h1>

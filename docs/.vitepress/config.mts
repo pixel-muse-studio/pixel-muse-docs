@@ -69,7 +69,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '가이드', link: '/ko/guide/' },
-          { text: '현재 테마', items: [
+          { text: '프로젝트', items: [
             { text: 'PMdurability', link: '/ko/pmdurability/' }
           ] }
         ],
@@ -95,7 +95,7 @@ export default defineConfig({
     socialLinks: [],
     nav: [
       { text: 'Guide', link: '/guide/' },
-      { text: 'Current theme', items: [
+      { text: 'Projects', items: [
         { text: 'PMdurability', link: '/pmdurability/' }
       ] }
     ],

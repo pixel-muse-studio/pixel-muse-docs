@@ -218,6 +218,7 @@ Pixel Muse Docs는 Nanitabs에서 영감을 받은 크리에이터 도구 워크
 ### Home Workspace
 
 - **Hero:** 좌측 정렬된 대형 문장과 설명, CTA를 한 작업 패널 안에 둔다. 오른쪽은 불규칙한 라일락 레일 면이며 픽셀 로고가 문장 안에 들어간다.
+- **Goo Material:** 히어로 오른쪽 레일은 SVG blur·alpha matrix 필터로 합쳐지는 라일락 덩어리다. 반복 재생하지 않고 hover·focus에서만 짧게 형태를 바꾼다.
 - **Path Cards:** 세 개의 비대칭 도구 카드로 프로젝트, 예제, 검색 진입점을 제공한다.
 - **Project Panel:** 설명과 실제 YAML 코드 창을 1:1로 배치한다.
 - **Principles:** 카드 반복 대신 구분선 목록으로 설정→예제→연동 흐름을 설명한다.
@@ -227,7 +228,6 @@ Pixel Muse Docs는 Nanitabs에서 영감을 받은 크리에이터 도구 워크
 
 - **Shell:** `28px 28px 10px 28px` 곡률의 도구 모달이며 어두운 백드롭 위에 뜬다.
 - **Input:** 최소 54px 높이, 16px 곡률의 넓은 필드다.
-- **History:** 최근 검색어는 작은 라벨 아래 라일락 계열 필 칩으로 최대 3개 표시한다.
 
 ## Do's and Don'ts
 
