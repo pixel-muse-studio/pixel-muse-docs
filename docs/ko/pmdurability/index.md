@@ -1,6 +1,6 @@
 # 💎 PMdurability
 
-> CraftEngine 중심의 커스텀 내구도 브리지
+> CraftEngine 아이템용 커스텀 내구도 연동 플러그인
 
 ![Version](https://img.shields.io/badge/version-2.4.0-7C3AED)
 ![Paper](https://img.shields.io/badge/Paper-1.21.4%2B-06B6D4)

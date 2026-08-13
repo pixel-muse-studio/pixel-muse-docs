@@ -50,7 +50,7 @@ data:
 <section class="brand-principles">
   <div>
     <p class="eyebrow">DOCUMENTATION PRINCIPLES</p>
-    <h2>Documentation made to be applied, not just read</h2>
+    <h2>Documentation designed for real implementation</h2>
   </div>
   <ol>
     <li><strong>01</strong><span><b>Configure</b>Check the required keys and defaults first.</span></li>

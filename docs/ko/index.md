@@ -52,7 +52,7 @@ data:
 <section class="brand-principles">
   <div>
     <p class="eyebrow">DOCUMENTATION PRINCIPLES</p>
-    <h2>읽고 끝나는 문서가 아니라, 바로 적용되는 문서</h2>
+    <h2>읽는 데서 끝나지 않고, 바로 적용할 수 있는 문서</h2>
   </div>
   <ol>
     <li><strong>01</strong><span><b>설정부터</b> 필요한 키와 기본값을 먼저 확인합니다.</span></li>

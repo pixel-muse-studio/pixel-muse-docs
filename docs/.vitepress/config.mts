@@ -54,7 +54,7 @@ export default defineConfig({
         if (titleMatch) token.info = info.replace(/\s*\[[^\]]+\]\s*$/, '')
         const safeLanguage = md.utils.escapeHtml(language === 'vb' ? 'skript' : language)
         const rightLabel = titleMatch ? md.utils.escapeHtml(titleMatch[1]) : safeLanguage
-        return `<div class="pm-code-example"><div class="pm-code-toolbar"><span class="pm-code-dots" aria-hidden="true"></span><span class="pm-code-label">${rightLabel}</span></div>${renderFence(tokens, index, options, env, self)}</div>`
+        return `<div class="pm-code-example" translate="no"><div class="pm-code-toolbar"><span class="pm-code-dots" aria-hidden="true"></span><span class="pm-code-label">${rightLabel}</span></div>${renderFence(tokens, index, options, env, self)}</div>`
       }
     }
   },
@@ -77,7 +77,6 @@ export default defineConfig({
     nav: [
       { text: 'Guide', link: '/guide/' },
       { text: 'Projects', items: [
-        { text: 'Browse all projects', link: '/projects/' },
         { text: 'PMdurability', link: '/pmdurability/' }
       ] }
     ],
@@ -95,7 +94,6 @@ export default defineConfig({
         nav: [
           { text: '가이드', link: '/ko/guide/' },
           { text: '프로젝트', items: [
-            { text: '전체 프로젝트 보기', link: '/ko/projects/' },
             { text: 'PMdurability', link: '/ko/pmdurability/' }
           ] }
         ],

@@ -1,6 +1,6 @@
 # PMdurability
 
-> A CraftEngine-first custom durability bridge.
+> Custom durability integration for CraftEngine items.
 
 ![Version](https://img.shields.io/badge/version-2.4.0-7C3AED)
 ![Paper](https://img.shields.io/badge/Paper-1.21.4%2B-06B6D4)

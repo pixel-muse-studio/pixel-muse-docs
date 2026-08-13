@@ -28,8 +28,8 @@ body { width: 100%; letter-spacing: -.012em; }
 .VPNavBarTitle .logo { width: 34px; height: 34px; image-rendering: pixelated; }
 .VPNavBarMenuLink { font-weight: 650; }
 .VPNavBar .content { padding-left: 34px; }
-.VPNavBar .content-body { display: flex; width: 100%; gap: 28px; }
-.VPNavBarSearch { flex: 1 1 760px; max-width: none; min-width: 320px; padding: 0; }
+.VPNavBar .content-body { display: flex; width: 100%; justify-content: flex-start; gap: 28px; }
+.VPNavBarSearch { flex: 0 1 460px; width: min(460px, 36vw); max-width: 460px; min-width: 280px; padding: 0; }
 .VPNavBarSearch .DocSearch-Button,
 .VPNavBarSearch button {
   width: 100%;
@@ -183,7 +183,9 @@ body { width: 100%; letter-spacing: -.012em; }
 .vp-doc table { display: table; width: 100%; }
 .vp-doc .tip.custom-block { border-color: #9b55ff; }
 .VPSidebarItem.level-0 > .item .text { font-weight: 800; }
-.VPSidebar { border-right: 1px solid rgba(139, 70, 255, .08); }
+.VPSidebar { left: 0 !important; width: 272px !important; padding-left: 18px !important; padding-right: 18px !important; border-right: 1px solid rgba(139, 70, 255, .08); }
+.VPDoc .aside-container { right: 12px !important; }
+.VPDoc .aside { padding-left: 18px; }
 
 .pm-breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 24px; color: var(--vp-c-text-3); font-size: 13px; }
 .pm-breadcrumbs a { color: var(--vp-c-text-2); font-weight: 650; text-decoration: none; }
