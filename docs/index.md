@@ -2,32 +2,24 @@
 layout: home
 pageClass: pixel-muse-home
 
-hero:
-  name: Pixel Muse Studio
-  tagline: Example-first documentation for Minecraft projects—from configuration to production-ready integrations.
-  image:
-    src: /brand/pixel-muse-icon-1000.png
-    alt: Pixel Muse Studio pixel logo
-  actions:
-    - theme: brand
-      text: Explore projects
-      link: /projects/
-
-features:
-  - icon: ✦
-    title: Project guides
-    details: Installation, configuration, examples, and APIs are organized into a focused guide for every plugin.
-  - icon: ⧉
-    title: Ready-to-use examples
-    details: Copy complete YAML, commands, Skript, and Java examples, then change only the names and values.
-  - icon: ⌕
-    title: Fast search
-    details: Find a setting key or feature across every project from one prominent search experience.
 ---
+
+<section class="pm-poster-hero">
+  <span class="pm-spark pm-spark--left" aria-hidden="true"></span>
+  <span class="pm-spark pm-spark--right" aria-hidden="true"></span>
+  <h1><span>Build with</span><img src="/brand/pixel-muse-icon.png" alt="" aria-hidden="true"><span>Pixel Muse</span><strong>ship with docs</strong></h1>
+  <p>From Minecraft project configuration to integration APIs.<br>Documentation you can copy, apply, and test immediately.</p>
+  <a class="pm-hero-action" href="./projects/">View projects <span aria-hidden="true">→</span></a>
+</section>
+
+<nav class="pm-home-paths" aria-label="Documentation highlights">
+  <a href="./projects/"><b>Project guides</b><span>Installation through API</span></a>
+  <a href="./pmdurability/examples"><b>Ready-to-use examples</b><span>YAML · Skript · Java</span></a>
+  <button class="pm-search-trigger" type="button"><b>Quick search</b><span>Find keys and features</span></button>
+</nav>
 
 <section class="brand-intro">
   <div class="brand-intro__copy">
-    <p class="eyebrow">FEATURED PROJECT</p>
     <h2>PMdurability</h2>
     <p>Add flexible maximum durability and pixel gauges to CraftEngine items. Food, crafting tools, repairs, enchantments, and integrations stay in one consistent system.</p>
     <div class="brand-tags"><span>CraftEngine</span><span>Paper</span><span>PlaceholderAPI</span><span>Skript</span></div>
@@ -49,13 +41,12 @@ data:
 
 <section class="brand-principles">
   <div>
-    <p class="eyebrow">DOCUMENTATION PRINCIPLES</p>
     <h2>Documentation designed for real implementation</h2>
   </div>
   <ol>
-    <li><strong>01</strong><span><b>Configure</b>Check the required keys and defaults first.</span></li>
-    <li><strong>02</strong><span><b>Try an example</b>Copy a complete setup and test it quickly.</span></li>
-    <li><strong>03</strong><span><b>Integrate</b>Connect commands, events, and external plugins.</span></li>
+    <li><span><b>Configure</b> Check the required keys and defaults first.</span></li>
+    <li><span><b>Try an example</b> Copy a complete setup and test it quickly.</span></li>
+    <li><span><b>Integrate</b> Connect commands, events, and external plugins.</span></li>
   </ol>
 </section>
 

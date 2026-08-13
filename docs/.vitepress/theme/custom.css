@@ -10,6 +10,14 @@
   --vp-font-family-base: Pretendard, SUIT, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+@font-face {
+  font-family: "Bricolage Grotesque PM";
+  src: url("/pixel-muse-docs/fonts/bricolage-grotesque-800.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 .dark {
   --vp-c-bg: #0d0915;
   --vp-c-bg-alt: #120c1f;
@@ -30,6 +38,7 @@ body { width: 100%; letter-spacing: -.012em; }
 .VPNavBarSearch { flex: 1 1 560px; width: auto; max-width: 620px; min-width: 180px; margin-right: auto; padding-left: 24px; }
 .VPNavBarSearch .DocSearch-Button,
 .VPNavBarSearch button {
+  flex: 1 1 auto;
   width: 100%;
   height: 42px;
   justify-content: flex-start;
@@ -64,9 +73,7 @@ body { width: 100%; letter-spacing: -.012em; }
   mask-image: linear-gradient(to bottom, #000 0%, transparent 92%);
 }
 .pixel-muse-home .VPHero .name {
-  background: linear-gradient(120deg, #7636f1 8%, #be37ff 54%, #f08cff 100%);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #a99bff;
   font-size: clamp(48px, 7vw, 76px);
   letter-spacing: -.065em;
   line-height: .98;
@@ -236,4 +243,185 @@ body { width: 100%; letter-spacing: -.012em; }
   .brand-intro { border-radius: 22px; }
   .mascot-strip { flex-direction: column; gap: 16px; text-align: center; }
   .mascot-strip img { width: 92%; }
+}
+
+/* Pixel Muse poster world: floating chrome, kinetic type, quiet reading surfaces. */
+:root { --vp-nav-height: 88px; }
+::selection { color: #171221; background: #b3a3ff; }
+:focus-visible { outline: 3px solid #b3a3ff !important; outline-offset: 3px; }
+
+.VPNav { border: 0; background: transparent !important; }
+.VPNavBar { padding-top: 14px; background: transparent !important; }
+.VPNavBar > .wrapper > .container {
+  width: calc(100% - 40px);
+  max-width: 1500px;
+  height: 62px;
+  margin-inline: auto;
+  padding-inline: 22px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 22px;
+  color: #fff;
+  background: #15121d;
+  box-shadow: 0 14px 36px rgba(10, 7, 18, .16);
+}
+.VPNavBar.has-sidebar > .wrapper > .container { max-width: calc(100% - 40px); }
+.VPNavBar.has-sidebar .title { position: static; width: auto; padding: 0; background: transparent; }
+.VPNavBar.has-sidebar .content { padding-inline: 0; }
+.VPNavBar .content-body { height: 60px; background: transparent !important; }
+.VPNavBarTitle .title { height: 60px; color: #fff; }
+.VPNavBarTitle .logo { width: 32px; height: 32px; }
+.VPNavBarMenuLink,
+.VPNavBarMenuGroup .text,
+.VPNavBarTranslations .text,
+.VPNavBarAppearance button { color: #f6f2fb !important; }
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuGroup .button:hover .text { color: #a99bff !important; }
+.VPNavBarSearch { max-width: 540px; }
+.VPNavBarSearch > div { flex: 1 1 auto; min-width: 0; }
+.VPNavBarSearch > div > button { width: 100%; }
+.VPNavBarSearch .DocSearch-Button,
+.VPNavBarSearch button {
+  height: 38px;
+  border-color: rgba(255,255,255,.1);
+  border-radius: 12px;
+  color: #d8d0e2;
+  background: #201b2a;
+  box-shadow: none;
+}
+.VPNavBarSearch .DocSearch-Button:hover,
+.VPNavBarSearch button:hover { border-color: rgba(179,163,255,.55); background: #292236; box-shadow: none; }
+.VPNavScreen { padding-top: 104px; }
+
+.pixel-muse-home { background: #24202f; }
+.pixel-muse-home .VPHome { min-height: 100vh; overflow: hidden; background: #24202f; }
+.pixel-muse-home .VPHome::before {
+  content: "";
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  width: min(900px, 80vw);
+  height: 520px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: rgba(133, 112, 255, .075);
+  filter: blur(90px);
+  pointer-events: none;
+}
+.pixel-muse-home .VPHome > .VPHomeContent { padding-top: 0; }
+.pixel-muse-home .vp-doc { max-width: 1180px; padding: 0 28px 80px; color: #fff; }
+
+.pm-poster-hero {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  min-height: 690px;
+  padding: 132px 24px 76px;
+  text-align: center;
+}
+.pm-poster-hero h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1060px;
+  margin: 0;
+  border: 0;
+  color: #fff;
+  font-size: clamp(58px, 7.3vw, 100px);
+  font-family: "Bricolage Grotesque PM", Pretendard, SUIT, sans-serif;
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: .96;
+  text-wrap: balance;
+}
+.pm-poster-hero h1 img { width: .82em; height: .82em; margin: 0 .16em; image-rendering: pixelated; }
+.pm-poster-hero h1 strong { flex-basis: 100%; margin-top: .15em; color: #a99bff; font: inherit; }
+.pm-poster-hero > p { max-width: 740px; margin: 38px auto 0; color: #d8d0e2; font-size: clamp(17px, 2vw, 21px); line-height: 1.65; }
+.pm-hero-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 58px;
+  margin-top: 34px;
+  padding: 0 28px;
+  border: 2px solid #a99bff;
+  border-radius: 999px;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: color .2s ease, background .2s ease, transform .2s ease;
+}
+.pm-hero-action:hover { color: #17121f !important; background: #a99bff; transform: translateY(-2px); }
+.pm-hero-action span { transition: transform .2s ease; }
+.pm-hero-action:hover span { transform: translateX(4px); }
+.pm-spark { position: absolute; width: 25px; height: 25px; background: #b1a2ff; clip-path: polygon(50% 0,60% 38%,100% 50%,60% 62%,50% 100%,40% 62%,0 50%,40% 38%); }
+.pm-spark--left { top: 320px; left: 3%; background: #e6f49b; transform: rotate(9deg); }
+.pm-spark--right { top: 365px; right: 4%; transform: rotate(-8deg); }
+
+.pm-home-paths {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto 104px;
+  border-block: 1px solid rgba(255,255,255,.12);
+}
+.pm-home-paths > * {
+  display: grid;
+  gap: 4px;
+  padding: 24px 28px;
+  border: 0;
+  color: #fff !important;
+  background: transparent;
+  text-align: left;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+.pm-home-paths > * + * { border-left: 1px solid rgba(255,255,255,.12); }
+.pm-home-paths > *:hover { background: rgba(169,155,255,.09); }
+.pm-home-paths b { font-size: 17px; }
+.pm-home-paths span { color: #aaa0b8; font-size: 13px; }
+
+.pixel-muse-home .brand-intro { border-color: rgba(255,255,255,.1); background: #1b1724; box-shadow: 0 28px 70px rgba(8,5,14,.22); }
+.pixel-muse-home .brand-intro h2,
+.pixel-muse-home .brand-principles h2 { color: #fff; }
+.pixel-muse-home .brand-intro__copy > p { color: #c7bdcf; }
+.pixel-muse-home .brand-tags span { border-color: rgba(169,155,255,.28); color: #b8abff; background: rgba(169,155,255,.08); }
+.pixel-muse-home .brand-link { color: #b8abff; }
+.brand-principles li { grid-template-columns: 1fr; }
+.brand-principles li span { color: #bdb3c7; }
+.brand-principles li b { color: #fff; }
+.pixel-muse-home .mascot-strip { background: #17131f; border: 1px solid rgba(255,255,255,.1); box-shadow: none; }
+
+@media (max-width: 959px) {
+  .VPNavBar > .wrapper > .container { width: calc(100% - 24px); padding-inline: 16px; border-radius: 20px; }
+  .VPNavBar.has-sidebar > .wrapper > .container { max-width: calc(100% - 24px); }
+  .pm-poster-hero { min-height: 610px; padding-top: 108px; }
+  .pm-poster-hero h1 { font-size: clamp(52px, 10vw, 78px); }
+}
+
+@media (max-width: 767px) {
+  :root { --vp-nav-height: 78px; }
+  .VPNavBar { padding-top: 8px; }
+  .VPNavBar > .wrapper > .container { width: calc(100% - 16px); height: 58px; padding-inline: 14px; border-radius: 18px; }
+  .VPNavBar.has-sidebar > .wrapper > .container { max-width: calc(100% - 16px); }
+  .VPNavBar .content-body, .VPNavBarTitle .title { height: 56px; }
+  .VPNavBarSearch .DocSearch-Button,
+  .VPNavBarSearch button { flex: 0 0 40px; }
+  .pm-poster-hero { min-height: 570px; padding: 92px 0 58px; }
+  .pm-poster-hero h1 { font-size: clamp(45px, 13vw, 64px); }
+  .pm-poster-hero h1 img { margin-inline: .1em; }
+  .pm-poster-hero > p { margin-top: 28px; font-size: 16px; }
+  .pm-home-paths { grid-template-columns: 1fr; margin-bottom: 72px; }
+  .pm-home-paths > * { padding: 18px 8px; }
+  .pm-home-paths > * + * { border-left: 0; border-top: 1px solid rgba(255,255,255,.12); }
+  .pm-spark { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .pm-hero-action,
+  .pm-hero-action span,
+  .brand-link span,
+  .VPNavBarSearch button { transition: none; }
 }

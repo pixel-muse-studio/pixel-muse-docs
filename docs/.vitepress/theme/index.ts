@@ -57,6 +57,11 @@ function enhanceSearchHistory() {
 
 function startClientEnhancements() {
   document.addEventListener('click', (event) => {
+    const searchTrigger = (event.target as HTMLElement).closest('.pm-search-trigger')
+    if (searchTrigger) {
+      document.querySelector<HTMLButtonElement>('.VPNavBarSearch button')?.click()
+      return
+    }
     const anchor = (event.target as HTMLElement).closest('a')
     if (!anchor) return
     const url = new URL(anchor.href, location.href)
