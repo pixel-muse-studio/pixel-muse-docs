@@ -14,7 +14,7 @@
 - 음식, 제작 도구, Shift 제작, 제작대·모루 수리
 - Mending, Unbreaking, Unbreakable, 파손 보호
 - PlaceholderAPI, Skript, Java 이벤트 API
-- 플레이어·상자·엔더 상자·드롭 아이템 분할 동기화
+- 플레이어 인벤토리, 상자, 엔더 상자와 드롭 아이템 상태 동기화
 
 ## 호환성
 
@@ -39,7 +39,7 @@ data:
 
 ## 다음 단계
 
-1. [설치와 빠른 시작](getting-started)
+1. [설치 및 시작](getting-started)
 2. [설정 및 PDC 키](configuration)
 3. [완성 예제](examples)
 4. [명령어·Placeholder·API](commands-api)

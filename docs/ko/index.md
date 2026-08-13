@@ -16,20 +16,20 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <span class="pm-spark pm-spark--left" aria-hidden="true"></span>
   <span class="pm-spark pm-spark--right" aria-hidden="true"></span>
   <h1><a href="https://mcmodels.net/vendors/284/pixel-muse-studio">Pixel Muse Studio</a></h1>
-  <p>Minecraft 프로젝트의 설정부터 연동 API까지.<br>복사하고, 적용하고, 바로 테스트할 수 있는 문서입니다.</p>
+  <p>Minecraft 프로젝트 설정부터 연동 API까지 한곳에 정리했습니다.<br>필요한 예제를 복사해 바로 적용하고 테스트해 보세요.</p>
   <a class="pm-hero-action" href="./projects/">프로젝트 보기 <span aria-hidden="true">→</span></a>
 </section>
 
 <nav class="pm-home-paths" aria-label="문서 주요 기능">
-  <a href="./projects/"><b>프로젝트별 가이드</b><span>설치부터 API까지</span></a>
+  <a href="./projects/"><b>프로젝트 가이드</b><span>설치부터 API 연동까지</span></a>
   <a href="./pmdurability/examples"><b>바로 쓰는 예제</b><span>YAML · Skript · Java</span></a>
-  <button class="pm-search-trigger" type="button"><b>빠른 문서 검색</b><span>키와 기능을 즉시 찾기</span></button>
+  <button class="pm-search-trigger" type="button"><b>문서 검색</b><span>설정 키와 기능 찾기</span></button>
 </nav>
 
 <section class="brand-intro">
   <div class="brand-intro__copy">
     <h2>PMdurability</h2>
-    <p>CraftEngine 아이템에 자유로운 최대 내구도와 픽셀 게이지를 더합니다. 음식, 제작 도구, 수리, 인챈트와 외부 플러그인 연동까지 하나의 흐름으로 관리합니다.</p>
+    <p>CraftEngine 아이템에 원하는 최대 내구도와 픽셀 게이지를 적용합니다. 음식과 제작 도구부터 수리, 인챈트, 외부 플러그인 연동까지 한곳에서 관리할 수 있습니다.</p>
     <div class="brand-tags">
       <span>CraftEngine</span><span>Paper</span><span>PlaceholderAPI</span><span>Skript</span>
     </div>
@@ -51,12 +51,12 @@ data:
 
 <section class="brand-principles">
   <div>
-    <h2>읽는 데서 끝나지 않고, 바로 적용할 수 있는 문서</h2>
+    <h2>설명을 읽고 바로 적용할 수 있는 문서</h2>
   </div>
   <ol>
-    <li><span><b>설정부터</b> 필요한 키와 기본값을 먼저 확인합니다.</span></li>
-    <li><span><b>예제로</b> 완성된 구성을 복사해 빠르게 테스트합니다.</span></li>
-    <li><span><b>연동까지</b> 명령어, 이벤트와 외부 플러그인을 연결합니다.</span></li>
+    <li><span><b>설정 확인</b> 필요한 키와 기본값을 먼저 살펴봅니다.</span></li>
+    <li><span><b>예제 적용</b> 완성된 구성을 복사해 빠르게 테스트합니다.</span></li>
+    <li><span><b>기능 연동</b> 명령어와 이벤트를 외부 플러그인에 연결합니다.</span></li>
   </ol>
 </section>
 

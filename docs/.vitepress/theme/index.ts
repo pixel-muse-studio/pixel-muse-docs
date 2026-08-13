@@ -56,6 +56,10 @@ function enhanceSearchHistory() {
 }
 
 function startClientEnhancements() {
+  const syncScrolledState = () => document.documentElement.classList.toggle('pm-scrolled', window.scrollY > 12)
+  window.addEventListener('scroll', syncScrolledState, { passive: true })
+  syncScrolledState()
+
   document.addEventListener('click', (event) => {
     const searchTrigger = (event.target as HTMLElement).closest('.pm-search-trigger')
     if (searchTrigger) {

@@ -20,7 +20,7 @@
   --pm-text-2: #cdc8dc;
   --pm-text-3: #9993ab;
   --pm-line: rgba(205, 197, 255, .14);
-  --pm-shadow: 0 24px 64px rgba(3, 3, 10, .28);
+  --pm-shadow: 0 28px 72px rgba(3, 3, 10, .22), 0 8px 24px rgba(3, 3, 10, .16);
   --vp-c-brand-1: #a9a4ff;
   --vp-c-brand-2: #bbb3ff;
   --vp-c-brand-3: #8b87e8;
@@ -61,9 +61,18 @@ body { color: var(--pm-text); background: var(--pm-canvas); }
   border: 1px solid rgba(255,255,255,.07);
   border-radius: 28px;
   color: var(--pm-text);
-  background: #14141f;
-  box-shadow: 0 18px 48px rgba(4,4,11,.28);
+  background: rgba(20,20,31,.94);
+  box-shadow: 0 18px 52px rgba(4,4,11,.22), 0 4px 16px rgba(4,4,11,.14);
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease, backdrop-filter .2s ease;
 }
+.pm-scrolled .VPNavBar > .wrapper > .container {
+  border-color: rgba(205,197,255,.11);
+  background: rgba(20,20,31,.74);
+  box-shadow: 0 20px 60px rgba(4,4,11,.26), inset 0 1px 0 rgba(255,255,255,.035);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+.VPNavBar .divider,
+.VPNavBar .divider-line { display: none !important; }
 .VPNavBar.has-sidebar > .wrapper > .container { max-width: calc(100% - 40px); }
 .VPNavBar.has-sidebar .title { position: static; width: auto; padding: 0; background: transparent; }
 .VPNavBar.has-sidebar .content { padding-inline: 0; }
@@ -90,14 +99,14 @@ body { color: var(--pm-text); background: var(--pm-canvas); }
   transition: border-color .18s ease, background .18s ease;
 }
 .VPNavBarSearch .DocSearch-Button:hover,
-.VPNavBarSearch button:hover { border-color: rgba(187,179,255,.5); background: #33314a; }
+.VPNavBarSearch button:hover { border-color: rgba(187,179,255,.32); background: #33314a; }
 .VPNavScreen { padding-top: 108px; background: var(--pm-canvas); }
 
 /* Documentation app shell */
 body:has(.VPDoc) .Layout {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 1px 1px, rgba(187,179,255,.045) 1px, transparent 0) 0 0 / 20px 20px,
+    radial-gradient(circle at 1px 1px, rgba(187,179,255,.032) 1px, transparent 0) 0 0 / 20px 20px,
     var(--pm-canvas);
 }
 body:has(.VPDoc) .VPContent { background: transparent; }
@@ -193,7 +202,7 @@ body:has(.VPDoc) .VPContent { background: transparent; }
     width: 190px;
     height: 10px;
     border-radius: 0 0 12px 12px;
-    background: linear-gradient(90deg, var(--pm-accent), var(--pm-pink));
+    background: linear-gradient(90deg, var(--pm-accent), #b798ef 56%, var(--pm-pink));
   }
   body:has(.VPDoc) .VPDoc .container { max-width: 1280px; padding-top: 54px; }
   body:has(.VPDoc) .VPDoc .content { max-width: 760px; padding: 8px 12px 96px; }
@@ -329,17 +338,22 @@ body:has(.VPDoc) .VPContent { background: transparent; }
 .VPDocFooter .pager-link .title { color: var(--pm-accent-strong); font-weight: 850; }
 
 /* Search as a creator-tool panel */
-.VPLocalSearchBox { overscroll-behavior: contain; }
-.VPLocalSearchBox .backdrop { background: rgba(8,8,15,.76); }
+.VPLocalSearchBox { position: fixed; inset: 0; overscroll-behavior: contain; }
+html:has(.VPLocalSearchBox),
+body:has(.VPLocalSearchBox) { overflow: hidden; }
+.VPLocalSearchBox .backdrop { position: fixed; inset: 0; background: rgba(8,8,15,.68); backdrop-filter: blur(8px); }
 .VPLocalSearchBox .shell {
   border: 1px solid rgba(187,179,255,.2);
   border-radius: 28px 28px 10px 28px;
   color: var(--pm-text);
   background: #1d1d2d;
-  box-shadow: 0 32px 92px rgba(3,3,9,.5);
+  box-shadow: 0 36px 100px rgba(3,3,9,.42), 0 10px 34px rgba(3,3,9,.28);
 }
-.VPLocalSearchBox .search-bar { padding: 22px 22px 14px; }
-.VPLocalSearchBox .search-input { min-height: 54px; border-radius: 16px; color: var(--pm-text); background: #302e49; font-size: 16px; }
+.VPLocalSearchBox .search-bar,
+.VPLocalSearchBox .search-bar:focus-within { padding: 22px 22px 14px; border: 0; box-shadow: none; }
+.VPLocalSearchBox .search-input { min-height: 54px; border: 1px solid rgba(187,179,255,.13); border-radius: 16px; color: var(--pm-text); background: #302e49; box-shadow: none !important; font-size: 16px; }
+.VPLocalSearchBox .search-input:focus,
+.VPLocalSearchBox .search-input:focus-visible { outline: none !important; border-color: rgba(187,179,255,.28); box-shadow: none !important; }
 .pm-recent-searches { margin: 0 22px 16px; padding: 15px 16px 17px; border: 1px solid var(--pm-line); border-radius: 17px; background: #292740; }
 .pm-recent-searches[hidden] { display: none; }
 .pm-recent-searches p { margin: 0 0 10px; color: var(--pm-text-3); font-size: 11px; font-weight: 800; }
@@ -393,6 +407,7 @@ body:has(.VPDoc) .VPContent { background: transparent; }
 .pm-poster-hero h1 strong { flex-basis: 100%; color: var(--pm-accent-strong); font: inherit; }
 .pm-poster-hero h1 a { color: inherit; text-decoration: none; }
 .pm-poster-hero h1 a:hover { color: var(--pm-accent-strong); }
+.pixel-muse-home .vp-doc h1::before { display: none; }
 .pm-poster-hero > p { z-index: 1; max-width: 650px; margin: 34px 0 0; color: #d3cedd; font-size: 19px; line-height: 1.65; }
 .pm-hero-action { z-index: 1; display: inline-flex; align-items: center; gap: 14px; min-height: 56px; margin-top: 32px; padding: 0 27px; border: 2px solid var(--pm-accent); border-radius: 999px; color: var(--pm-text) !important; font-weight: 850; text-decoration: none !important; transition: color .18s ease, background .18s ease, transform .18s ease; }
 .pm-hero-action:hover { color: #191825 !important; background: var(--pm-accent); transform: translateY(-2px); }

@@ -44,6 +44,7 @@ export default defineConfig({
   appearance: false,
   lastUpdated: true,
   markdown: {
+    theme: 'github-dark',
     config(md) {
       const renderFence = md.renderer.rules.fence
       if (!renderFence) return
@@ -68,7 +69,7 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '가이드', link: '/ko/guide/' },
-          { text: '프로젝트', items: [
+          { text: '현재 테마', items: [
             { text: 'PMdurability', link: '/ko/pmdurability/' }
           ] }
         ],
@@ -94,7 +95,7 @@ export default defineConfig({
     socialLinks: [],
     nav: [
       { text: 'Guide', link: '/guide/' },
-      { text: 'Projects', items: [
+      { text: 'Current theme', items: [
         { text: 'PMdurability', link: '/pmdurability/' }
       ] }
     ],
