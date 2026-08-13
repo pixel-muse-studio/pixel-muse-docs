@@ -131,8 +131,8 @@ Pixel Muse Docs는 Nanitabs에서 영감을 받은 크리에이터 도구 워크
 
 ## Typography
 
-**Display Font:** Bricolage Grotesque PM 800, Pretendard 폴백  
-**Body Font:** Pretendard, SUIT, Segoe UI, system-ui  
+**Display Font:** Bricolage Grotesque PM 800, Pretendard 폴백
+**Body Font:** Pretendard, SUIT, Segoe UI, system-ui
 **Code Font:** VitePress 모노스페이스 스택
 
 **Character:** 홈의 영문 디스플레이는 굵고 압축된 Bricolage Grotesque로 도구 브랜드의 개성을 만든다. 한국어와 문서 본문은 Pretendard 중심의 산세리프로 안정적인 가독성을 유지한다.
