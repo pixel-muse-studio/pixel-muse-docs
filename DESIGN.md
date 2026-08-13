@@ -20,9 +20,9 @@ colors:
   spark-lime: "#e6f49b"
 typography:
   display:
-    fontFamily: "Pretendard, SUIT, Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+    fontFamily: "Bricolage Grotesque PM, Pretendard, SUIT, sans-serif"
     fontSize: "clamp(58px, 7.3vw, 100px)"
-    fontWeight: 900
+    fontWeight: 800
     lineHeight: 0.96
     letterSpacing: "-0.055em"
   section-heading:
